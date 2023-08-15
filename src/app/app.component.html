@@ -1,17 +1,26 @@
-<div class="drawer" [ngClass]="{ 'xl:drawer-open' : !isHomepage() }">
+<div [ngClass]="{ 'xl:drawer-open' : !isHomepage() }" class="drawer">
   <input class="drawer-toggle" type="checkbox" id="myDrawer"/>
   <div class="drawer-page-content">
     <!-- page content -->
     <app-navbar></app-navbar> <!-- the navbar -->
-    <div class="p-4">
+    <div [ngClass]="{ 'p-4' : !isHomepage() }">
       <router-outlet></router-outlet>
     </div>
   </div>
 
-  <div class="drawer-sidebar">
+  <div *ngIf="!isHomepage()" class="drawer-sidebar">
     <div class="drawer-sidebar-content">
+      <div class="bg-tertiary-80 w-full h-[4.25rem] hidden xl:block">
+        <ul class="menu menu-horizontal">
+          <li>
+            <a href="/home">
+              Almost Material
+            </a>
+          </li>
+        </ul>
+      </div>
       <!-- sidebar content -->
-      <ul class="menu">
+      <ul class="menu menu-sm xl:!h-[calc(100%-4.25rem)]">
         <!-- upper drawer links -->
         <li *ngFor="let link of upperDrawerLinks">
           <a routerLink="{{ link.route }}" routerLinkActive="menu-active">{{ link.name }}</a>
