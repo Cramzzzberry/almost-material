@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const plugin = require('./almost-material/almost-material')
+const plugin = require('almost-material')
 
 const myPalette = {
   primary: "#4fc1e9",

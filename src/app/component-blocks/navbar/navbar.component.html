@@ -42,6 +42,12 @@
   <!-- navbar end -->
   <div class="navbar-end">
     <ul class="menu menu-horizontal">
+      <li *ngIf="isHomepage()">
+        <a href="/documentation/how-to-install">
+          Docs
+          <span class="badge badge-warning">In Dev</span>
+        </a>
+      </li>
       <li>
         <a href="https://github.com/Cramzzzberry/almost-material-plugin" target="_blank">
           Github

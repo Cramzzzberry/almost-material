@@ -7,18 +7,19 @@ import { Router } from "@angular/router";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title = 'almost-material-docs';
   upperDrawerLinks: any[] = [
     {
       name: 'How to Install',
-      route: '/how-to-install',
+      route: '/documentation/how-to-install',
     },
     {
       name: 'Configuration',
-      route: '/configuration',
+      route: '/documentation/configuration',
     },
     {
       name: 'Color Shades',
-      route: '/color-shades',
+      route: '/documentation/color-shades',
     },
   ];
 
@@ -28,15 +29,15 @@ export class AppComponent {
       routes: [
         {
           name: 'Button',
-          route: '/button',
+          route: '/documentation/button',
         },
         {
           name: 'Input Fields',
-          route: '/input-fields',
+          route: '/documentation/input-fields',
         },
         {
           name: 'Slider',
-          route: '/slider',
+          route: '/documentation/slider',
         },
       ]
     },
@@ -45,23 +46,23 @@ export class AppComponent {
       routes: [
         {
           name: 'Card',
-          route: '/card',
+          route: '/documentation/card',
         },
         {
           name: 'Dropdown',
-          route: '/dropdown',
+          route: '/documentation/dropdown',
         },
         {
           name: 'Image Container',
-          route: '/image-container',
+          route: '/documentation/image-container',
         },
         {
           name: 'Menu',
-          route: '/menu',
+          route: '/documentation/menu',
         },
         {
           name: 'Modal',
-          route: '/modal',
+          route: '/documentation/modal',
         },
       ]
     },
@@ -70,19 +71,19 @@ export class AppComponent {
       routes: [
         {
           name: 'Checkbox',
-          route: '/checkbox',
+          route: '/documentation/checkbox',
         },
         {
           name: 'Swap',
-          route: '/swap',
+          route: '/documentation/swap',
         },
         {
           name: 'Switch',
-          route: '/switch',
+          route: '/documentation/switch',
         },
         {
           name: 'Radio Button',
-          route: '/radio-button',
+          route: '/documentation/radio-button',
         },
       ]
     },
@@ -91,15 +92,15 @@ export class AppComponent {
       routes: [
         {
           name: 'Navigation bar',
-          route: '/navigation-bar',
+          route: '/documentation/navigation-bar',
         },
         {
           name: 'Navigation Drawer',
-          route: '/navigation-drawer',
+          route: '/documentation/navigation-drawer',
         },
         {
           name: 'Navigation Rail',
-          route: '/navigation-rail',
+          route: '/documentation/navigation-rail',
         },
       ]
     },
@@ -108,19 +109,19 @@ export class AppComponent {
       routes: [
         {
           name: 'Badge',
-          route: '/badge',
+          route: '/documentation/badge',
         },
         {
           name: 'Divider',
-          route: '/divider',
+          route: '/documentation/divider',
         },
         {
           name: 'Indicator',
-          route: '/indicator',
+          route: '/documentation/indicator',
         },
         {
           name: 'Progress Bar',
-          route: '/progress-bar',
+          route: '/documentation/progress-bar',
         },
       ]
     },
