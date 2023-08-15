@@ -1,0 +1,23 @@
+<div class="flex flex-row justify-between items-center px-4 mb-2">
+  <h4 class="font-semibold">{{ variantName }}</h4>
+
+  <div class="flex flex-row gap-2">
+    <button class="btn btn-sm" [ngClass]="{'btn-active' : tabState === 0, 'btn-ghost' : tabState !== 0}" (click)="showTab(0)">preview</button>
+    <button class="btn btn-sm" [ngClass]="{'btn-active' : tabState === 1, 'btn-ghost' : tabState !== 1}" (click)="showTab(1)">HTML</button>
+    <button class="btn btn-sm" [ngClass]="{'btn-active' : tabState === 2, 'btn-ghost' : tabState !== 2}" (click)="showTab(2)">JSX</button>
+  </div>
+</div>
+
+<div *ngIf="tabState === 0 && putCard === 'yes'" class="card gap-2 p-4 flex flex-wrap justify-center items-center min-h-[5.5rem]">
+  <ng-template [ngTemplateOutlet]="preview"></ng-template>
+</div>
+
+<ng-template *ngIf="tabState === 0 && putCard === 'no'" [ngTemplateOutlet]="preview"></ng-template>
+
+<pre *ngIf="tabState === 1" class="card p-4">
+<code class="language-html">{{ htmlCode }}</code>
+</pre>
+
+<pre *ngIf="tabState === 2" class="card p-4">
+<code class="language-jsx">{{ jsxCode }}</code>
+</pre>

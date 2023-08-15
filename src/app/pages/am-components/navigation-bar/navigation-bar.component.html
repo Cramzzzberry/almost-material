@@ -1,0 +1,173 @@
+<div class="card px-24 py-32 mb-4">
+  <h1 class="font-bold">Navigation Bar</h1>
+  <h4>Provides quick access to other pages/navigation points. It sits on top or at the bottom of the page</h4>
+</div>
+
+<div class="flex flex-col gap-2">
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Navigation Bar'"
+    [preview]="navbar"
+    [htmlCode]="snippets['navigation bar'].htmlCode"
+    [jsxCode]="snippets['navigation bar'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'no'"
+    [variantName]="'Navigation Bar with collapsible Menu'"
+    [preview]="navbarWithCollapsibleMenu"
+    [htmlCode]="snippets['navigation bar with collapsible menu'].htmlCode"
+    [jsxCode]="snippets['navigation bar with collapsible menu'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'no'"
+    [variantName]="'Navigation Bar with Dropdown Menu'"
+    [preview]="navbarWithDropdownMenu"
+    [htmlCode]="snippets['navigation bar with dropdown menu'].htmlCode"
+    [jsxCode]="snippets['navigation bar with dropdown menu'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Navbar Start, Center and End'"
+    [preview]="navbarSections"
+    [htmlCode]="snippets['navbar start, center and end'].htmlCode"
+    [jsxCode]="snippets['navbar start, center and end'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Bottom Navigation Bar'"
+    [preview]="bottomNavbar"
+    [htmlCode]="snippets['bottom navigation bar'].htmlCode"
+    [jsxCode]="snippets['bottom navigation bar'].jsxCode" >
+  </app-tabs>
+</div>
+
+<ng-template #navbar>
+  <div class="navbar !static z-[0]"> 
+    <div class="navbar-start">
+      <ul class="menu menu-horizontal">
+        <li><a>News</a></li>
+        <li><a>Blogs</a></li>
+        <li><a>Contact Me</a></li>
+      </ul>
+    </div>
+  
+    <div class="navbar-end">
+      <ul class="menu menu-horizontal">
+        <li><a>Almost Material</a></li>
+      </ul>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #navbarWithCollapsibleMenu>
+  <div class="card p-4 min-h-[14rem]">
+    <div class="navbar !static z-[0]">
+      <div class="navbar-start">
+        <ul class="menu menu-horizontal">
+          <li>
+            <details open>
+              <summary>
+                Menu
+                <span class="material-icons-round">
+                  expand_more
+                </span>
+              </summary>
+              <ul class="w-56">
+                <li><a>Item 1</a></li>
+                <li><a>Item 2</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a>Updates</a></li>
+        </ul>
+      </div>
+    
+      <div class="navbar-end">
+        <ul class="menu menu-horizontal">
+          <li><a>Almost Material</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #navbarWithDropdownMenu>
+  <div class="card p-4 min-h-[14rem]">
+    <div class="navbar !static z-[0]">
+      <div class="navbar-start">
+        <ul class="menu menu-horizontal">
+          <li><a>Meals</a></li>
+          <li><a>Mix & Match</a></li>
+          <li>
+            <div class="dropdown">
+              <button tabIndex="0" class="btn btn-ghost">
+                More
+                <span class="material-icons-round">
+                  expand_more
+                </span>
+              </button>
+              <div tabIndex="0" class="dropdown-content z-[1] card">
+                <ul class="menu w-56">
+                  <li><a>Link 1</a></li>
+                  <li><a>Link 2</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    
+      <div class="navbar-end">
+        <ul class="menu menu-horizontal">
+          <li><a>Almost Material</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #navbarSections>
+  <div class="navbar !static z-[0]">
+    <!-- navbar start -->
+    <div class="navbar-start">
+      <ul class="menu menu-horizontal">
+        <li><a>Almost Material</a></li>
+      </ul>
+    </div>
+  
+    <!-- navbar center -->
+    <div class="navbar-center">
+      <ul class="menu menu-horizontal">
+        <li><a>On Sale</a></li>
+        <li><a>Bundles</a></li>
+        <li><a>Categories</a></li>
+      </ul>
+    </div>
+  
+    <!-- navbar end -->
+    <div class="navbar-end">
+      <ul class="menu menu-horizontal">
+        <li>
+          <a class="btn">
+            <span class="material-icons-round">
+              shopping_cart
+            </span>
+            Shopping Cart
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #bottomNavbar>
+  <div class="navbar navbar-bottom !static z-[0]">
+    <ul class="menu">
+      <li><a class="menu-active"><span class="material-icons-round">home</span>home</a></li>
+      <li><a><span class="material-icons-round">library_books</span>library</a></li>
+      <li><a><span class="material-icons-round">favorite</span>favorites</a></li>
+      <li><a><span class="material-icons-round">update</span>update</a></li>
+      <li><a><span class="material-icons-round">settings</span>settings</a></li>
+    </ul>
+  </div>
+</ng-template>

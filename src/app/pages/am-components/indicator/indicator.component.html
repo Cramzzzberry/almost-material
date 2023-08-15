@@ -1,0 +1,147 @@
+<div class="card px-24 py-32 mb-4">
+  <h1 class="font-bold">Indicator</h1>
+  <h4>It positions the element to indicator state</h4>
+</div>
+
+<div class="flex flex-col gap-2">
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Indicator'"
+    [preview]="indicator"
+    [htmlCode]="snippets['indicator'].htmlCode"
+    [jsxCode]="snippets['indicator'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Indicator on top left'"
+    [preview]="indicatorOnTopLeft"
+    [htmlCode]="snippets['indicator on top left'].htmlCode"
+    [jsxCode]="snippets['indicator on top left'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Indicator on top center'"
+    [preview]="indicatorOnTopCenter"
+    [htmlCode]="snippets['indicator on top center'].htmlCode"
+    [jsxCode]="snippets['indicator on top center'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Indicator on top right'"
+    [preview]="indicatorOnTopRight"
+    [htmlCode]="snippets['indicator on top right'].htmlCode"
+    [jsxCode]="snippets['indicator on top right'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Indicator on middle left'"
+    [preview]="indicatorOnMiddleLeft"
+    [htmlCode]="snippets['indicator on middle left'].htmlCode"
+    [jsxCode]="snippets['indicator on middle left'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Indicator on middle center'"
+    [preview]="indicatorOnMiddleCenter"
+    [htmlCode]="snippets['indicator on middle center'].htmlCode"
+    [jsxCode]="snippets['indicator on middle center'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Indicator on middle right'"
+    [preview]="indicatorOnMiddleRight"
+    [htmlCode]="snippets['indicator on middle right'].htmlCode"
+    [jsxCode]="snippets['indicator on middle right'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Indicator on bottom left'"
+    [preview]="indicatorOnBottomLeft"
+    [htmlCode]="snippets['indicator on bottom left'].htmlCode"
+    [jsxCode]="snippets['indicator on bottom left'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Indicator on bottom center'"
+    [preview]="indicatorOnBottomCenter"
+    [htmlCode]="snippets['indicator on bottom center'].htmlCode"
+    [jsxCode]="snippets['indicator on bottom center'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Indicator on bottom right'"
+    [preview]="indicatorOnBottomRight"
+    [htmlCode]="snippets['indicator on bottom right'].htmlCode"
+    [jsxCode]="snippets['indicator on bottom right'].jsxCode" >
+  </app-tabs>
+</div>
+
+<ng-template #indicator>
+  <div class="indicator">
+    <span class="indicator-item badge badge-error">+999</span>
+    <button class="btn">Messages</button>
+  </div>
+</ng-template>
+
+<ng-template #indicatorOnTopLeft>
+  <div class="indicator">
+    <span class="indicator-item indicator-top indicator-start badge badge-error">+999</span>
+    <button class="btn">Messages</button>
+  </div>
+</ng-template>
+
+<ng-template #indicatorOnTopCenter>
+  <div class="indicator">
+    <span class="indicator-item indicator-top indicator-center badge badge-error">+999</span>
+    <button class="btn">Messages</button>
+  </div>
+</ng-template>
+
+<ng-template #indicatorOnTopRight>
+  <div class="indicator">
+    <span class="indicator-item indicator-top indicator-end badge badge-error">+999</span>
+    <button class="btn">Messages</button>
+  </div>
+</ng-template>
+
+<ng-template #indicatorOnMiddleLeft>
+  <div class="indicator">
+    <span class="indicator-item indicator-middle indicator-start badge badge-error">+999</span>
+    <button class="btn">Messages</button>
+  </div>
+</ng-template>
+
+<ng-template #indicatorOnMiddleCenter>
+  <div class="indicator">
+    <span class="indicator-item indicator-middle indicator-center badge badge-error">+999</span>
+    <button class="btn">Messages</button>
+  </div>
+</ng-template>
+
+<ng-template #indicatorOnMiddleRight>
+  <div class="indicator">
+    <span class="indicator-item indicator-middle indicator-end badge badge-error">+999</span>
+    <button class="btn">Messages</button>
+  </div>
+</ng-template>
+
+<ng-template #indicatorOnBottomLeft>
+  <div class="indicator">
+    <span class="indicator-item indicator-bottom indicator-start badge badge-error">+999</span>
+    <button class="btn">Messages</button>
+  </div>
+</ng-template>
+
+<ng-template #indicatorOnBottomCenter>
+  <div class="indicator">
+    <span class="indicator-item indicator-bottom indicator-center badge badge-error">+999</span>
+    <button class="btn">Messages</button>
+  </div>
+</ng-template>
+
+<ng-template #indicatorOnBottomRight>
+  <div class="indicator">
+    <span class="indicator-item indicator-bottom indicator-end badge badge-error">+999</span>
+    <button class="btn">Messages</button>
+  </div>
+</ng-template>

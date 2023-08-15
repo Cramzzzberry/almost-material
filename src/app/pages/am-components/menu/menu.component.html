@@ -1,0 +1,485 @@
+<div class="card px-24 py-32 mb-4">
+  <h1 class="font-bold">Menu</h1>
+  <h4>Used to group links, navigation points, choices, and others</h4>
+</div>
+
+<div class="flex flex-col gap-2">
+  <app-tabs
+    [putCard]="'no'"
+    [variantName]="'Menu'"
+    [preview]="menu"
+    [htmlCode]="snippets['menu'].htmlCode"
+    [jsxCode]="snippets['menu'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'no'"
+    [variantName]="'Menu with icons and Badge'"
+    [preview]="menuWithIconsAndBadge"
+    [htmlCode]="snippets['menu with icons and badge'].htmlCode"
+    [jsxCode]="snippets['menu with icons and badge'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'no'"
+    [variantName]="'Menu with icons only'"
+    [preview]="menuWithIconsOnly"
+    [htmlCode]="snippets['menu with icons only'].htmlCode"
+    [jsxCode]="snippets['menu with icons only'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'no'"
+    [variantName]="'Menu with title'"
+    [preview]="menuWithTitle"
+    [htmlCode]="snippets['menu with title'].htmlCode"
+    [jsxCode]="snippets['menu with title'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'no'"
+    [variantName]="'Menu with title as parent'"
+    [preview]="menuWithTitleAsParent"
+    [htmlCode]="snippets['menu with title as parent'].htmlCode"
+    [jsxCode]="snippets['menu with title as parent'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'no'"
+    [variantName]="'Menu with submenu'"
+    [preview]="menuWithSubmenu"
+    [htmlCode]="snippets['menu with submenu'].htmlCode"
+    [jsxCode]="snippets['menu with submenu'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'no'"
+    [variantName]="'Collapsible submenu'"
+    [preview]="collapsibleSubmenu"
+    [htmlCode]="snippets['collapsible submenu'].htmlCode"
+    [jsxCode]="snippets['collapsible submenu'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'no'"
+    [variantName]="'Horizontal Menu'"
+    [preview]="horizontalMenu"
+    [htmlCode]="snippets['horizontal menu'].htmlCode"
+    [jsxCode]="snippets['horizontal menu'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'no'"
+    [variantName]="'Horizonal Menu with icons and Badge'"
+    [preview]="HorizontalMenuWithIconsAndBadge"
+    [htmlCode]="snippets['horizontal menu with icons and badge'].htmlCode"
+    [jsxCode]="snippets['horizontal menu with icons and badge'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'no'"
+    [variantName]="'Horizontal Menu with icons only'"
+    [preview]="horizontalMenuWithIconsOnly"
+    [htmlCode]="snippets['horizontal menu with icons only'].htmlCode"
+    [jsxCode]="snippets['horizontal menu with icons only'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'no'"
+    [variantName]="'Horizontal Menu with submenu'"
+    [preview]="horizontalMenuWithSubmenu"
+    [htmlCode]="snippets['horizontal menu with submenu'].htmlCode"
+    [jsxCode]="snippets['horizontal menu with submenu'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'no'"
+    [variantName]="'Horizontal collapsible submenu'"
+    [preview]="horizontalCollapsibleSubmenu"
+    [htmlCode]="snippets['horizontal collapsible submenu'].htmlCode"
+    [jsxCode]="snippets['horizontal collapsible submenu'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'no'"
+    [variantName]="'Menu with colors and active state'"
+    [preview]="menuWithColorsAndActiveState"
+    [htmlCode]="snippets['menu with colors and active state'].htmlCode"
+    [jsxCode]="snippets['menu with colors and active state'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'no'"
+    [variantName]="'Menu with different sizes'"
+    [preview]="menuWithDifferentSizes"
+    [htmlCode]="snippets['menu with different sizes'].htmlCode"
+    [jsxCode]="snippets['menu with different sizes'].jsxCode" >
+  </app-tabs>
+</div>
+
+<ng-template #menu>
+  <div class="flex justify-center items-center">
+    <div class="card w-56">
+      <ul class="menu">
+        <li><a>Link 1</a></li>
+        <li><a>Link 2</a></li>
+        <li><a>Link 3</a></li>
+      </ul>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #menuWithIconsAndBadge>
+  <div class="flex justify-center items-center">
+    <div class="card w-72">
+      <ul class="menu">
+        <li><a><span class="material-icons-round">home</span>Home</a></li>
+        <li><a><span class="material-icons-round">info</span>Info</a></li>
+        <li>
+          <a>
+            <span class="material-icons-round">watch_later</span>
+            Watch Later
+            <span class="badge badge-error">+999</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #menuWithIconsOnly>
+  <div class="flex justify-center items-center">
+    <div class="card">
+      <ul class="menu">
+        <li><a><span class="material-icons-round">home</span></a></li>
+        <li><a><span class="material-icons-round">info</span></a></li>
+        <li><a><span class="material-icons-round">watch_later</span></a></li>
+      </ul>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #menuWithTitle>
+  <div class="flex justify-center items-center">
+    <div class="card w-56">
+      <ul class="menu">
+        <li class="menu-title">Title</li>
+        <li><a>Link 1</a></li>
+        <li><a>Link 2</a></li>
+        <li><a>Link 3</a></li>
+      </ul>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #menuWithTitleAsParent>
+  <div class="flex justify-center items-center">
+    <div class="card w-56">
+      <ul class="menu">
+        <li>
+          <span class="menu-title">Title</span>
+          <ul>
+            <li><a>Link 1</a></li>
+            <li><a>Link 2</a></li>
+            <li><a>Link 3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #menuWithSubmenu>
+  <div class="flex justify-center items-center">
+    <div class="card w-60">
+      <ul class="menu">
+        <li><a>Link 1</a></li>
+        <li>
+          <a>Parent</a>
+          <ul>
+            <li><a>Child 1</a></li>
+            <li><a>Child 2</a></li>
+            <li>
+              <a>Parent</a>
+              <ul>
+                <li><a>Child 1</a></li>
+                <li><a>Child 2</a></li>
+                <li><a>Child 3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a>Link 3</a></li>
+      </ul>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #collapsibleSubmenu>
+  <div class="flex justify-center items-center">
+    <div class="card w-56">
+      <ul class="menu">
+        <li><a>Link 1</a></li>
+        <li>
+          <details open>
+            <summary>Opened</summary>
+            <ul>
+              <li><a>Child 1</a></li>
+              <li><a>Child 2</a></li>
+              <li>
+                <details>
+                  <summary>collapsed</summary>
+                  <ul>
+                    <li><a>Child 1</a></li>
+                    <li><a>Child 2</a></li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li><a>Link 3</a></li>
+      </ul>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #horizontalMenu>
+  <div class="flex justify-center items-center min-h-[14rem]">
+    <div class="card">
+      <ul class="menu menu-horizontal">
+        <li><a>Link 1</a></li>
+        <li><a>Link 2</a></li>
+        <li><a>Link 3</a></li>
+      </ul>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #HorizontalMenuWithIconsAndBadge>
+  <div class="flex justify-center items-center min-h-[14rem]">
+    <div class="card">
+      <ul class="menu menu-horizontal">
+        <li><a><span class="material-icons-round">home</span>Home</a></li>
+        <li><a><span class="material-icons-round">info</span>Info</a></li>
+        <li>
+          <a>
+            <span class="material-icons-round">watch_later</span>
+            Watch Later
+            <span class="badge badge-error">+999</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #horizontalMenuWithIconsOnly>
+  <div class="flex justify-center items-center min-h-[14rem]">
+    <div class="card">
+      <ul class="menu menu-horizontal">
+        <li><a><span class="material-icons-round">home</span></a></li>
+        <li><a><span class="material-icons-round">info</span></a></li>
+        <li><a><span class="material-icons-round">watch_later</span></a></li>
+      </ul>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #horizontalMenuWithSubmenu>
+  <div class="flex justify-center items-center min-h-[20rem]">
+    <div class="card">
+      <ul class="menu menu-horizontal">
+        <li><a>Link 1</a></li>
+        <li>
+          <a>Parent</a>
+          <ul>
+            <li><a>Child 1</a></li>
+            <li><a>Child 2</a></li>
+            <li>
+              <a>Parent</a>
+              <ul>
+                <li><a>Child 1</a></li>
+                <li><a>Child 2</a></li>
+                <li><a>Child 3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a>Link 3</a></li>
+      </ul>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #horizontalCollapsibleSubmenu>
+  <div class="flex justify-center items-start min-h-[22rem]">
+    <div class="card">
+      <ul class="menu menu-horizontal">
+        <li><a>Link 1</a></li>
+        <li>
+          <details open>
+            <summary>Opened</summary>
+            <ul>
+              <li><a>Child 1</a></li>
+              <li><a>Child 2</a></li>
+              <li>
+                <details>
+                  <summary>collapsed</summary>
+                  <ul>
+                    <li><a>Child 1</a></li>
+                    <li><a>Child 2</a></li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li><a>Link 3</a></li>
+      </ul>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #menuWithColorsAndActiveState>
+  <div class="flex flex-wrap gap-2 justify-center items-start">
+    <!-- default -->
+    <div class="card">
+      <ul class="menu">
+        <li><a class="menu-active">Link 1</a></li>
+        <li><a>Link 2</a></li>
+        <li><a>Link 3</a></li>
+      </ul>
+    </div>
+    
+    <!-- primary -->
+    <div class="card">
+      <ul class="menu menu-primary">
+        <li><a class="menu-active">Link 1</a></li>
+        <li><a>Link 2</a></li>
+        <li><a>Link 3</a></li>
+      </ul>
+    </div>
+    
+    <!-- secondary -->
+    <div class="card">
+      <ul class="menu menu-secondary">
+        <li><a class="menu-active">Link 1</a></li>
+        <li><a>Link 2</a></li>
+        <li><a>Link 3</a></li>
+      </ul>
+    </div>
+    
+    <!-- tertiary -->
+    <div class="card">
+      <ul class="menu menu-tertiary">
+        <li><a class="menu-active">Link 1</a></li>
+        <li><a>Link 2</a></li>
+        <li><a>Link 3</a></li>
+      </ul>
+    </div>
+    
+    <!-- info -->
+    <div class="card">
+      <ul class="menu menu-info">
+        <li><a class="menu-active">Link 1</a></li>
+        <li><a>Link 2</a></li>
+        <li><a>Link 3</a></li>
+      </ul>
+    </div>
+    
+    <!-- warning -->
+    <div class="card">
+      <ul class="menu menu-warning">
+        <li><a class="menu-active">Link 1</a></li>
+        <li><a>Link 2</a></li>
+        <li><a>Link 3</a></li>
+      </ul>
+    </div>
+    
+    <!-- success -->
+    <div class="card">
+      <ul class="menu menu-success">
+        <li><a class="menu-active">Link 1</a></li>
+        <li><a>Link 2</a></li>
+        <li><a>Link 3</a></li>
+      </ul>
+    </div>
+    
+    <!-- error -->
+    <div class="card">
+      <ul class="menu menu-error">
+        <li><a class="menu-active">Link 1</a></li>
+        <li><a>Link 2</a></li>
+        <li><a>Link 3</a></li>
+      </ul>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #menuWithDifferentSizes>
+  <div class="flex flex-wrap gap-2 justify-center items-start min-h-[32.5rem]">
+    <!-- small -->
+    <div class="card w-48">
+      <ul class="menu menu-sm">
+        <li class="menu-title">Small</li>
+        <li><a class="menu-active">Link 1</a></li>
+        <li><a>Link 2</a></li>
+        <li><a>Link 3</a></li>
+        <li>
+          <details open>
+            <summary>Opened</summary>
+            <ul>
+              <li><a>Child 1</a></li>
+              <li><a>Child 2</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </div>
+    
+    <!-- default -->
+    <div class="card w-56">
+      <ul class="menu menu-md">
+        <li class="menu-title">default</li>
+        <li><a class="menu-active">Link 1</a></li>
+        <li><a>Link 2</a></li>
+        <li><a>Link 3</a></li>
+        <li>
+          <details open>
+            <summary>Opened</summary>
+            <ul>
+              <li><a>Child 1</a></li>
+              <li><a>Child 2</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </div>
+
+    <!-- large -->
+    <div class="card w-64">
+      <ul class="menu menu-lg">
+        <li class="menu-title">large</li>
+        <li><a class="menu-active">Link 1</a></li>
+        <li><a>Link 2</a></li>
+        <li><a>Link 3</a></li>
+        <li>
+          <details open>
+            <summary>Opened</summary>
+            <ul>
+              <li><a>Child 1</a></li>
+              <li><a>Child 2</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </div>
+    
+    <!-- xl -->
+    <div class="card w-72">
+      <ul class="menu menu-xl">
+        <li class="menu-title">RAWR</li>
+        <li><a class="menu-active">Link 1</a></li>
+        <li><a>Link 2</a></li>
+        <li><a>Link 3</a></li>
+        <li>
+          <details open>
+            <summary>Opened</summary>
+            <ul>
+              <li><a>Child 1</a></li>
+              <li><a>Child 2</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </div>
+  </div>
+</ng-template>

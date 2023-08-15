@@ -1,0 +1,53 @@
+<div class="card px-24 py-32 mb-4">
+  <h1 class="font-bold">Slider</h1>
+  <h4>Lets the user choose from a range of values</h4>
+</div>
+
+<div class="flex flex-col gap-2">
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Slider'"
+    [preview]="slider"
+    [htmlCode]="snippets['slider'].htmlCode"
+    [jsxCode]="snippets['slider'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Slider with colors'"
+    [preview]="sliderWithColors"
+    [htmlCode]="snippets['slider with colors'].htmlCode"
+    [jsxCode]="snippets['slider with colors'].jsxCode" >
+  </app-tabs>
+</div>
+
+<ng-template #slider>
+  <input type="range" class="slider w-72">
+</ng-template>
+
+<ng-template #sliderWithColors>
+  <div class="flex flex-col gap-2 items-center">
+    <!-- default -->
+    <input type="range" class="slider w-72">
+
+    <!-- primary -->
+    <input type="range" class="slider slider-primary w-72">
+
+    <!-- secondary -->
+    <input type="range" class="slider slider-secondary w-72">
+
+    <!-- tertiary -->
+    <input type="range" class="slider slider-tertiary w-72">
+
+    <!-- info -->
+    <input type="range" class="slider slider-info w-72">
+
+    <!-- warning -->
+    <input type="range" class="slider slider-warning w-72">
+
+    <!-- success -->
+    <input type="range" class="slider slider-success w-72">
+
+    <!-- error -->
+    <input type="range" class="slider slider-error w-72">
+  </div>
+</ng-template>

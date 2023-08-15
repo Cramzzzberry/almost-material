@@ -1,0 +1,94 @@
+<div class="card px-24 py-32 mb-4">
+  <h1 class="font-bold">Badge</h1>
+  <h4>Represents the status or notification of the underlying element</h4>
+</div>
+
+<div class="flex flex-col gap-2">
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Badge'"
+    [preview]="badge"
+    [htmlCode]="snippets['badge'].htmlCode"
+    [jsxCode]="snippets['badge'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Outlined Badge'"
+    [preview]="outlinedBadge"
+    [htmlCode]="snippets['outlined badge'].htmlCode"
+    [jsxCode]="snippets['outlined badge'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Badge without text'"
+    [preview]="badgeWithoutText"
+    [htmlCode]="snippets['badge without text'].htmlCode"
+    [jsxCode]="snippets['badge without text'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Badge in different colors'"
+    [preview]="badgeInColors"
+    [htmlCode]="snippets['badge in different colors'].htmlCode"
+    [jsxCode]="snippets['badge in different colors'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Badge in different sizes'"
+    [preview]="badgeSizes"
+    [htmlCode]="snippets['badge in different sizes'].htmlCode"
+    [jsxCode]="snippets['badge in different sizes'].jsxCode" >
+  </app-tabs>
+</div>
+
+<ng-template #badge>
+  <span class="badge">badge</span>
+</ng-template>
+
+<ng-template #outlinedBadge>
+  <span class="badge badge-outline">outlined</span>
+</ng-template>
+
+<ng-template #badgeWithoutText>
+  <span class="badge"></span>
+</ng-template>
+
+<ng-template #badgeInColors>
+  <!-- default -->
+  <span class="badge">default</span>
+
+  <!-- primary -->
+  <span class="badge badge-primary">primary</span>
+
+  <!-- secondary -->
+  <span class="badge badge-secondary">secondary</span>
+
+  <!-- tertiary -->
+  <span class="badge badge-tertiary">tertiary</span>
+
+  <!-- info -->
+  <span class="badge badge-info">info</span>
+
+  <!-- warning -->
+  <span class="badge badge-warning">warning</span>
+
+  <!-- success -->
+  <span class="badge badge-success">success</span>
+
+  <!-- error -->
+  <span class="badge badge-error">error</span>
+</ng-template>
+
+<ng-template #badgeSizes>
+  <!-- small -->
+  <span class="badge badge-sm">small</span>
+
+  <!-- default -->
+  <span class="badge badge-md">default</span>
+
+  <!-- large -->
+  <span class="badge badge-lg">large</span>
+
+  <!-- xl -->
+  <span class="badge badge-xl">RAWR</span>
+</ng-template>

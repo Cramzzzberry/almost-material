@@ -1,0 +1,103 @@
+<div class="card px-24 py-32 mb-4">
+  <h1 class="font-bold">Navigation Rail</h1>
+  <h4>Blah</h4>
+</div>
+
+<div class="flex flex-col gap-2">
+  <app-tabs
+    [putCard]="'no'"
+    [variantName]="'Navigation Rail'"
+    [preview]="rail"
+    [htmlCode]="snippets['rail'].htmlCode"
+    [jsxCode]="snippets['rail'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'no'"
+    [variantName]="'Navigation Rail with open toggle'"
+    [preview]="railWithOpenToggle"
+    [htmlCode]="snippets['rail with open toggle'].htmlCode"
+    [jsxCode]="snippets['rail with open toggle'].jsxCode" >
+  </app-tabs>
+</div>
+
+<ng-template #rail>
+  <div class="card p-4">
+    <div class="rail h-[24rem]">
+      <div class="rail-middle">
+        <ul class="menu">
+          <li>
+            <a class="menu-active">
+              <span class="material-icons-round">hexagon</span>
+            </a>
+          </li>
+          <li>
+            <a>
+              <span class="material-icons-round">hexagon</span>
+            </a>
+          </li>
+          <li>
+            <a>
+              <span class="material-icons-round">hexagon</span>
+            </a>
+          </li>
+          <li>
+            <a>
+              <span class="material-icons-round">hexagon</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #railWithOpenToggle>
+  <div class="card p-4">
+    <input type="checkbox" id="sampleRail2" class="rail-toggle">
+    <div class="rail h-[24rem]">
+      <!-- rail top -->
+      <div class="rail-top">
+        <label for="sampleRail2" class="btn btn-ghost">
+          <span class="material-icons-round">menu</span>
+          menu
+        </label>
+      </div>
+
+      <!-- rail middle -->
+      <div class="rail-middle">
+        <ul class="menu">
+          <li>
+            <a class="menu-active">
+              <span class="material-icons-round">hexagon</span>
+              label
+            </a>
+          </li>
+          <li>
+            <a>
+              <span class="material-icons-round">hexagon</span>
+              label
+            </a>
+          </li>
+          <li>
+            <a>
+              <span class="material-icons-round">hexagon</span>
+              label
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- rail bottom -->
+      <div class="rail-bottom">
+        <ul class="menu menu-rail">
+          <li>
+            <a>
+              <span class="material-icons-round">logout</span>
+              logout
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</ng-template>

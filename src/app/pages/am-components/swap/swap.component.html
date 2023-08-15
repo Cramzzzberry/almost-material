@@ -1,0 +1,60 @@
+<div class="card px-24 py-32 mb-4">
+  <h1 class="font-bold">Swap</h1>
+  <h4>Swaps two elements to represent states in more detail</h4>
+</div>
+
+<div class="flex flex-col gap-2">
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Swap'"
+    [preview]="swap"
+    [htmlCode]="snippets['swap'].htmlCode"
+    [jsxCode]="snippets['swap'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Swap with fade effect'"
+    [preview]="swapFade"
+    [htmlCode]="snippets['swap fade'].htmlCode"
+    [jsxCode]="snippets['swap fade'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Swap with rotate effect'"
+    [preview]="swapRotate"
+    [htmlCode]="snippets['swap rotate'].htmlCode"
+    [jsxCode]="snippets['swap rotate'].jsxCode" >
+  </app-tabs>
+</div>
+
+<ng-template #swap>
+  <label class="swap">
+    <input type="checkbox" />
+    <span class="swap-off">Click me</span>
+    <span class="swap-on">Why</span>
+  </label>
+</ng-template>
+
+<ng-template #swapFade>
+  <label class="swap swap-fade">
+    <input type="checkbox" />
+    <span class="swap-off">Off</span>
+    <span class="swap-on">On</span>
+  </label>
+</ng-template>
+
+<ng-template #swapRotate>
+  <label class="swap swap-rotate">
+    <input type="checkbox" />
+    <span class="swap-off">
+      <span class="material-icons-round">
+        light_mode
+      </span>
+    </span>
+    <span class="swap-on">
+      <span class="material-icons-round">
+        dark_mode
+      </span>
+    </span>
+  </label>
+</ng-template>

@@ -1,0 +1,70 @@
+<div class="card px-24 py-32 mb-4">
+  <h1 class="font-bold">Divider</h1>
+  <h4>Separates different elements in a group</h4>
+</div>
+
+<div class="flex flex-col gap-2">
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Divider'"
+    [preview]="divider"
+    [htmlCode]="snippets['divider'].htmlCode"
+    [jsxCode]="snippets['divider'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Horizontal Divider'"
+    [preview]="dividerHorizontal"
+    [htmlCode]="snippets['divider horizontal'].htmlCode"
+    [jsxCode]="snippets['divider horizontal'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Divider in different colors'"
+    [preview]="dividerWithColors"
+    [htmlCode]="snippets['divider in different colors'].htmlCode"
+    [jsxCode]="snippets['divider in different colors'].jsxCode" >
+  </app-tabs>
+</div>
+
+<ng-template #divider>
+  <div class="flex flex-col w-full">
+    <div class="flex justify-center items-center h-[6rem] bg-primary">Content 1</div>
+    <div class="divider"></div>
+    <div class="flex justify-center items-center h-[6rem] bg-secondary">Content 2</div>
+  </div>
+</ng-template>
+
+<ng-template #dividerHorizontal>
+  <div class="flex flex-row basis-full">
+    <div class="flex justify-center items-center h-[6rem] w-full bg-primary">Content 1</div>
+    <div class="divider divider-horizontal"></div>
+    <div class="flex justify-center items-center h-[6rem] w-full bg-secondary">Content 2</div>
+  </div>
+</ng-template>
+
+<ng-template #dividerWithColors>
+  <!-- default -->
+  <div class="divider"></div>
+
+  <!-- primary -->
+  <div class="divider divider-primary"></div>
+
+  <!-- secondary -->
+  <div class="divider divider-secondary"></div>
+
+  <!-- tertiary -->
+  <div class="divider divider-tertiary"></div>
+
+  <!-- info -->
+  <div class="divider divider-info"></div>
+
+  <!-- warning -->
+  <div class="divider divider-warning"></div>
+
+  <!-- success -->
+  <div class="divider divider-success"></div>
+
+  <!-- error -->
+  <div class="divider divider-error"></div>
+</ng-template>

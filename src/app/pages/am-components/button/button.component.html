@@ -1,0 +1,179 @@
+<div class="card px-24 py-32 mb-4">
+  <h1 class="font-bold">Button</h1>
+  <h4>It allows the user to take actions</h4>
+</div>
+
+<div class="flex flex-col gap-2">
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Button'"
+    [preview]="button"
+    [htmlCode]="snippets['button'].htmlCode"
+    [jsxCode]="snippets['button'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Button with icon'"
+    [preview]="buttonIcon"
+    [htmlCode]="snippets['button with icon'].htmlCode"
+    [jsxCode]="snippets['button with icon'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Outlined Button'"
+    [preview]="outlinedButton"
+    [htmlCode]="snippets['outlined button'].htmlCode"
+    [jsxCode]="snippets['outlined button'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Ghost Button'"
+    [preview]="ghostButton"
+    [htmlCode]="snippets['ghost button'].htmlCode"
+    [jsxCode]="snippets['ghost button'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Circle Button'"
+    [preview]="circleButton"
+    [htmlCode]="snippets['circle button'].htmlCode"
+    [jsxCode]="snippets['circle button'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Button with colors'"
+    [preview]="buttonWithColors"
+    [htmlCode]="snippets['button with colors'].htmlCode"
+    [jsxCode]="snippets['button with colors'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Different Button sizes'"
+    [preview]="buttonSizes"
+    [htmlCode]="snippets['different button sizes'].htmlCode"
+    [jsxCode]="snippets['different button sizes'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Active Button'"
+    [preview]="activeButton"
+    [htmlCode]="snippets['active buttons'].htmlCode"
+    [jsxCode]="snippets['active buttons'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Disabled Button'"
+    [preview]="disabledButton"
+    [htmlCode]="snippets['disabled button'].htmlCode"
+    [jsxCode]="snippets['disabled button'].jsxCode" >
+  </app-tabs>
+</div>
+
+<ng-template #button>
+  <button class="btn">button</button>
+</ng-template>
+
+<ng-template #buttonIcon>
+  <button class="btn">
+    <span class="material-icons-round">
+      search
+    </span>
+    button
+  </button>
+</ng-template>
+
+<ng-template #outlinedButton>
+  <button class="btn btn-outline">outlined</button>
+</ng-template>
+
+<ng-template #ghostButton>
+  <button class="btn btn-ghost">ghost</button>
+</ng-template>
+
+<ng-template #circleButton>
+  <button class="btn btn-circle">
+    <span class="material-icons-round">
+      search
+    </span>
+  </button>
+  <button class="btn btn-circle btn-outline">
+    <span class="material-icons-round">
+      search
+    </span>
+  </button>
+  <button class="btn btn-circle btn-ghost">
+    <span class="material-icons-round">
+      search
+    </span>
+  </button>
+</ng-template>
+
+<ng-template #buttonWithColors>
+  <!-- defaul;t -->
+  <button class="btn">default</button>
+
+  <!-- primary -->
+  <button class="btn btn-primary">primary</button>
+
+  <!-- secondary -->
+  <button class="btn btn-secondary">secondary</button>
+
+  <!-- tertiary -->
+  <button class="btn btn-tertiary">tertiary</button>
+
+  <!-- info -->
+  <button class="btn btn-info">info</button>
+
+  <!-- warning -->
+  <button class="btn btn-warning">warning</button>
+
+  <!-- success -->
+  <button class="btn btn-success">success</button>
+
+  <!-- error -->
+  <button class="btn btn-error">error</button>
+</ng-template>
+
+<ng-template #activeButton>
+  <!-- default -->
+  <button class="btn btn-active">default</button>
+
+  <!-- primary -->
+  <button class="btn btn-primary btn-active">primary</button>
+
+  <!-- secondary -->
+  <button class="btn btn-secondary btn-active">secondary</button>
+
+  <!-- tertiary -->
+  <button class="btn btn-tertiary btn-active">tertiary</button>
+
+  <!-- info -->
+  <button class="btn btn-info btn-active">info</button>
+
+  <!-- warning -->
+  <button class="btn btn-warning btn-active">warning</button>
+
+  <!-- success -->
+  <button class="btn btn-success btn-active">success</button>
+
+  <!-- error -->
+  <button class="btn btn-error btn-active">error</button>
+</ng-template>
+
+<ng-template #buttonSizes>
+  <!-- small -->
+  <button class="btn btn-sm">small</button>
+
+  <!-- default -->
+  <button class="btn btn-md">default</button>
+
+  <!-- large -->
+  <button class="btn btn-lg">large</button>
+
+  <!-- xl -->
+  <button class="btn btn-xl">RAWR</button>
+</ng-template>
+
+<ng-template #disabledButton>
+  <button class="btn" disabled="disabled">disabled</button>
+</ng-template>

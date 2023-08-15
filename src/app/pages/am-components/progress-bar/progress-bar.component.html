@@ -1,0 +1,76 @@
+<div class="card px-24 py-32 mb-4">
+  <h1 class="font-bold">Progress Bar</h1>
+  <h4>Displays a visual representation of a progress</h4>
+</div>
+
+<div class="flex flex-col gap-2">
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Progress Bar'"
+    [preview]="progressBar"
+    [htmlCode]="snippets['progress bar'].htmlCode"
+    [jsxCode]="snippets['progress bar'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Progress Bar in different colors'"
+    [preview]="progressBarWithColors"
+    [htmlCode]="snippets['progress bar in different colors'].htmlCode"
+    [jsxCode]="snippets['progress bar in different colors'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Progress Bar in different sizes'"
+    [preview]="progressBarSizes"
+    [htmlCode]="snippets['progress bar in different sizes'].htmlCode"
+    [jsxCode]="snippets['progress bar in different sizes'].jsxCode" >
+  </app-tabs>
+</div>
+
+<ng-template #progressBar>
+  <span class="progress" style="--value: 5; --max: 10;"></span>
+</ng-template>
+
+<ng-template #progressBarWithColors>
+  <div class="flex flex-col gap-4 items-center">
+    <!-- default -->
+    <span class="progress" style="--value: 5; --max: 10;"></span>
+  
+    <!-- primary -->
+    <span class="progress progress-primary" style="--value: 5; --max: 10;"></span>
+  
+    <!-- secondary -->
+    <span class="progress progress-secondary" style="--value: 5; --max: 10;"></span>
+  
+    <!-- tertiary -->
+    <span class="progress progress-tertiary" style="--value: 5; --max: 10;"></span>
+  
+    <!-- info -->
+    <span class="progress progress-info" style="--value: 5; --max: 10;"></span>
+  
+    <!-- warning -->
+    <span class="progress progress-warning" style="--value: 5; --max: 10;"></span>
+  
+    <!-- success -->
+    <span class="progress progress-success" style="--value: 5; --max: 10;"></span>
+  
+    <!-- error -->
+    <span class="progress progress-error" style="--value: 5; --max: 10;"></span>
+  </div>
+</ng-template>
+
+<ng-template #progressBarSizes>
+  <div class="flex flex-col gap-4">
+    <!-- small -->
+    <span class="progress progress-sm" style="--value: 5; --max: 10;"></span>
+  
+    <!-- default -->
+    <span class="progress progress-md" style="--value: 5; --max: 10;"></span>
+  
+    <!-- large -->
+    <span class="progress progress-lg" style="--value: 5; --max: 10;"></span>
+  
+    <!-- xl -->
+    <span class="progress progress-xl" style="--value: 5; --max: 10;"></span>
+  </div>
+</ng-template>

@@ -1,0 +1,66 @@
+<div class="card px-24 py-32 mb-4">
+  <h1 class="font-bold">Image Container</h1>
+  <h4>Used for containing images. The images are centered and cropped depending on the container size</h4>
+</div>
+
+<div class="flex flex-col gap-2">
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'A square image'"
+    [preview]="squareImage"
+    [htmlCode]="snippets['a square image'].htmlCode"
+    [jsxCode]="snippets['a square image'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'A circle image'"
+    [preview]="circleImage"
+    [htmlCode]="snippets['a circle image'].htmlCode"
+    [jsxCode]="snippets['a circle image'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'no'"
+    [variantName]="'An Image Container for a typical card'"
+    [preview]="imageInCard"
+    [htmlCode]="snippets['image in card'].htmlCode"
+    [jsxCode]="snippets['image in card'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'no'"
+    [variantName]="'Custom Image Container dimensions'"
+    [preview]="customImageDimensions"
+    [htmlCode]="snippets['custom image dimentions'].htmlCode"
+    [jsxCode]="snippets['custom image dimentions'].jsxCode" >
+  </app-tabs>
+</div>
+
+<ng-template #squareImage>
+  <div class="image" style="--image-url: url('https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=1380&t=st=1691415133~exp=1691415733~hmac=8c0f40e6bc18926c38bf4a1b65b2f5740122592b25fbcc5241b9e17308598a00')"></div>
+</ng-template>
+
+<ng-template #circleImage>
+  <div class="image image-circle" style="--image-url: url('https://img.freepik.com/free-photo/tender-feminine-woman-with-blue-eyes-smiles-pleasantly-has-toothy-smile-wears-white-comfortable-sweater-looks-directly-camera-isolated-pink-background_273609-32160.jpg?w=1380&t=st=1691415624~exp=1691416224~hmac=e921c4b34daa6ddc37207208206926736d926925a89eb76b66d8ff249c4580ed')"></div>
+</ng-template>
+
+<ng-template #imageInCard>
+  <div class="flex justify-center items-center">
+    <div class="card w-[26rem]">
+      <div class="image image-card" style="--image-url: url('https://img.freepik.com/free-photo/cappuccino-wood-espresso-coffee-latte_1150-1632.jpg?w=1380&t=st=1691421217~exp=1691421817~hmac=4ff7258b18ade2f12da7026c57a5159051a8e72cb3b39ace24a57a1861f481c2')"></div>
+      
+      <div class="card-body layout-spaced">
+        <h5 class="card-title">How to create a coffee</h5>
+        <span>Learn how to create the tastiest bevarage on the planet!</span>
+      </div>
+
+      <div class="card-actions justify-end">
+        <button class="btn">visit page</button>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #customImageDimensions>
+  <div class="card card-error p-6">
+    <div class="image w-full h-[24rem] rounded-[0.5rem]" style="--image-url: url('https://img.freepik.com/free-photo/sunset-silhouettes-trees-mountains-generative-ai_169016-29371.jpg?w=1380&t=st=1691420526~exp=1691421126~hmac=908944a9bc2e3b530371130687d2ec70fe0155b93d9b3aa3e081da01aff008c6')"></div>
+  </div>
+</ng-template>

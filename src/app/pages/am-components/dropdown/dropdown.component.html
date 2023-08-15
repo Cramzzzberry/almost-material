@@ -1,0 +1,205 @@
+<div class="card px-24 py-32 mb-4">
+  <h1 class="font-bold">Dropdown Menu</h1>
+  <h4>Gives users a list of contents, choices or links that floats around the button</h4>
+</div>
+
+<div class="flex flex-col gap-2">
+  <app-tabs
+    [putCard]="'no'"
+    [variantName]="'Dropdown'"
+    [preview]="dropdown"
+    [htmlCode]="snippets['dropdown'].htmlCode"
+    [jsxCode]="snippets['dropdown'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'no'"
+    [variantName]="'Dropdown Top'"
+    [preview]="dropdownTop"
+    [htmlCode]="snippets['dropdown top'].htmlCode"
+    [jsxCode]="snippets['dropdown top'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'no'"
+    [variantName]="'Dropdown Top aligned to end'"
+    [preview]="dropdownTopAlignedToEnd"
+    [htmlCode]="snippets['dropdown top aligned to end'].htmlCode"
+    [jsxCode]="snippets['dropdown top aligned to end'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'no'"
+    [variantName]="'Dropdown Bottom'"
+    [preview]="dropdownBottom"
+    [htmlCode]="snippets['dropdown bottom'].htmlCode"
+    [jsxCode]="snippets['dropdown bottom'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'no'"
+    [variantName]="'Dropdown Bottom aligned to end'"
+    [preview]="dropdownBottomAlignedToEnd"
+    [htmlCode]="snippets['dropdown bottom aligned to end'].htmlCode"
+    [jsxCode]="snippets['dropdown bottom aligned to end'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'no'"
+    [variantName]="'Dropdown Left'"
+    [preview]="dropdownLeft"
+    [htmlCode]="snippets['dropdown left'].htmlCode"
+    [jsxCode]="snippets['dropdown left'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'no'"
+    [variantName]="'Dropdown Left aligned to end'"
+    [preview]="dropdownLeftAlignedToEnd"
+    [htmlCode]="snippets['dropdown left aligned to end'].htmlCode"
+    [jsxCode]="snippets['dropdown left aligned to end'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'no'"
+    [variantName]="'Dropdown Right'"
+    [preview]="dropdownRight"
+    [htmlCode]="snippets['dropdown right'].htmlCode"
+    [jsxCode]="snippets['dropdown right'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'no'"
+    [variantName]="'Dropdown Right Aligned To End'"
+    [preview]="dropdownRightAlignedToEnd"
+    [htmlCode]="snippets['dropdown right aligned to end'].htmlCode"
+    [jsxCode]="snippets['dropdown right aligned to end'].jsxCode" >
+  </app-tabs>
+</div>
+
+<ng-template #dropdown>
+  <div class="card p-4 min-h-[17rem] flex justify-center items-start">
+    <div class="dropdown">
+      <button tabIndex="0" class="btn">Dropdown</button>
+      <div tabIndex="0" class="dropdown-content z-[1] card">
+        <ul class="menu w-56">
+          <li><a>Link 1</a></li>
+          <li><a>Link 2</a></li>
+          <li><a>Link 3</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #dropdownTop>
+  <div class="card p-4 min-h-[17rem] flex justify-center items-end">
+    <div class="dropdown dropdown-top">
+      <button tabIndex="0" class="btn">Dropdown</button>
+      <div tabIndex="0" class="dropdown-content z-[1] card">
+        <ul class="menu w-56">
+          <li><a>Link 1</a></li>
+          <li><a>Link 2</a></li>
+          <li><a>Link 3</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #dropdownTopAlignedToEnd>
+  <div class="card p-4 min-h-[17rem] flex justify-center items-end">
+    <div class="dropdown dropdown-top dropdown-end">
+      <button tabIndex="0" class="btn">Dropdown</button>
+      <div tabIndex="0" class="dropdown-content z-[1] card">
+        <ul class="menu w-56">
+          <li><a>Link 1</a></li>
+          <li><a>Link 2</a></li>
+          <li><a>Link 3</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #dropdownBottom>
+  <div class="card p-4 min-h-[17rem] flex justify-center items-start">
+    <div class="dropdown dropdown-bottom">
+      <button tabIndex="0" class="btn">Dropdown</button>
+      <div tabIndex="0" class="dropdown-content z-[1] card">
+        <ul class="menu w-56">
+          <li><a>Link 1</a></li>
+          <li><a>Link 2</a></li>
+          <li><a>Link 3</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #dropdownBottomAlignedToEnd>
+  <div class="card p-4 min-h-[17rem] flex justify-center items-start">
+    <div class="dropdown dropdown-bottom dropdown-end">
+      <button tabIndex="0" class="btn">Dropdown</button>
+      <div tabIndex="0" class="dropdown-content z-[1] card">
+        <ul class="menu w-56">
+          <li><a>Link 1</a></li>
+          <li><a>Link 2</a></li>
+          <li><a>Link 3</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #dropdownLeft>
+  <div class="card p-4 min-h-[20rem] flex justify-center items-center">
+    <div class="dropdown dropdown-left">
+      <button tabIndex="0" class="btn">Dropdown</button>
+      <div tabIndex="0" class="dropdown-content z-[1] card">
+        <ul class="menu w-56">
+          <li><a>Link 1</a></li>
+          <li><a>Link 2</a></li>
+          <li><a>Link 3</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #dropdownLeftAlignedToEnd>
+  <div class="card p-4 min-h-[20rem] flex justify-center items-center">
+    <div class="dropdown dropdown-left dropdown-end">
+      <button tabIndex="0" class="btn">Dropdown</button>
+      <div tabIndex="0" class="dropdown-content z-[1] card">
+        <ul class="menu w-56">
+          <li><a>Link 1</a></li>
+          <li><a>Link 2</a></li>
+          <li><a>Link 3</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #dropdownRight>
+  <div class="card p-4 min-h-[20rem] flex justify-center items-center">
+    <div class="dropdown dropdown-right">
+      <button tabIndex="0" class="btn">Dropdown</button>
+      <div tabIndex="0" class="dropdown-content z-[1] card">
+        <ul class="menu w-56">
+          <li><a>Link 1</a></li>
+          <li><a>Link 2</a></li>
+          <li><a>Link 3</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #dropdownRightAlignedToEnd>
+  <div class="card p-4 min-h-[20rem] flex justify-center items-center">
+    <div class="dropdown dropdown-right dropdown-end">
+      <button tabIndex="0" class="btn">Dropdown</button>
+      <div tabIndex="0" class="dropdown-content z-[1] card">
+        <ul class="menu w-56">
+          <li><a>Link 1</a></li>
+          <li><a>Link 2</a></li>
+          <li><a>Link 3</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</ng-template>

@@ -1,0 +1,134 @@
+<div class="card px-24 py-32 mb-4">
+  <h1 class="font-bold">Radio Button</h1>
+  <h4>Denotes the current state of an element and used for single choice</h4>
+</div>
+
+<div class="flex flex-col gap-2">
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Radio Button'"
+    [preview]="radioButton"
+    [htmlCode]="snippets['radio button'].htmlCode"
+    [jsxCode]="snippets['radio button'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Radio Button in different colors'"
+    [preview]="radioButtonWithColors"
+    [htmlCode]="snippets['radio button in different colors'].htmlCode"
+    [jsxCode]="snippets['radio button in different colors'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Radio Button in different sizes'"
+    [preview]="radioButtonSizes"
+    [htmlCode]="snippets['radio button in different sizes'].htmlCode"
+    [jsxCode]="snippets['radio button in different sizes'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Disabled Radio Button'"
+    [preview]="disabledRadioButton"
+    [htmlCode]="snippets['disabled radio button'].htmlCode"
+    [jsxCode]="snippets['disabled radio button'].jsxCode" >
+  </app-tabs>
+</div>
+
+<ng-template #radioButton>
+  <input type="radio" name="radio" class="radio">
+  <input type="radio" name="radio" checked class="radio">
+</ng-template>
+
+<ng-template #radioButtonWithColors>
+  <div class="flex flex-col gap-2">
+    <div class="flex gap-2">
+      <!-- default -->
+      <input type="radio" name="default" class="radio">
+      <input type="radio" name="default" checked class="radio">
+    </div>
+
+    
+    <div class="flex gap-2">
+      <!-- primary -->
+      <input type="radio" name="primary" class="radio radio-primary">
+      <input type="radio" name="primary" checked class="radio radio-primary">
+    </div>
+
+    
+    <div class="flex gap-2">
+      <!-- secondary -->
+      <input type="radio" name="secondary" class="radio radio-secondary">
+      <input type="radio" name="secondary" checked class="radio radio-secondary">
+    </div>
+
+    
+    <div class="flex gap-2">
+      <!-- tertiary -->
+      <input type="radio" name="tertiary" class="radio radio-tertiary">
+      <input type="radio" name="tertiary" checked class="radio radio-tertiary">
+    </div>
+
+    
+    <div class="flex gap-2">
+      <!-- info -->
+      <input type="radio" name="info" class="radio radio-info">
+      <input type="radio" name="info" checked class="radio radio-info">
+    </div>
+
+    
+    <div class="flex gap-2">
+      <!-- warning -->
+      <input type="radio" name="warning" class="radio radio-warning">
+      <input type="radio" name="warning" checked class="radio radio-warning">
+    </div>
+
+    
+    <div class="flex gap-2">
+      <!-- success -->
+      <input type="radio" name="success" class="radio radio-success">
+      <input type="radio" name="success" checked class="radio radio-success">
+    </div>
+
+    
+    <div class="flex gap-2">
+      <!-- error -->
+      <input type="radio" name="error" class="radio radio-error">
+      <input type="radio" name="error" checked class="radio radio-error">
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #radioButtonSizes>
+  <div class="flex flex-col gap-2 justify-center items-center">
+    <div class="flex gap-2">
+      <!-- small -->
+      <input type="radio" name="sm" class="radio radio-sm">
+      <input type="radio" name="sm" checked class="radio radio-sm">
+    </div>
+
+    <div class="flex gap-2">
+      <!-- default -->
+      <input type="radio" name="md" class="radio radio-md">
+      <input type="radio" name="md" checked class="radio radio-md">
+    </div>
+
+    <div class="flex gap-2">
+      <!-- large -->
+      <input type="radio" name="lg" class="radio radio-lg">
+      <input type="radio" name="lg" checked class="radio radio-lg">
+    </div>
+    
+    <div class="flex gap-2">
+      <!-- xl -->
+      <input type="radio" name="xl" class="radio radio-xl">
+      <input type="radio" name="xl" checked class="radio radio-xl">
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #disabledRadioButton>
+  <div class="flex gap-2">
+    <input type="radio" name="disabled" disabled class="radio">
+    <input type="radio" name="disabled" checked disabled class="radio">
+  </div>
+</ng-template>

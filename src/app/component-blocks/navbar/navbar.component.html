@@ -1,0 +1,53 @@
+<div class="navbar"> 
+  <!-- navbar start -->
+  <div class="navbar-start">
+    <ul class="menu menu-horizontal">
+      <li [ngClass]="{ '' : isHomepage(), 'xl:hidden' : !isHomepage() }">
+        <label for="myDrawer" class="btn btn-ghost btn-circle">
+          <span class="material-icons-round">menu</span>
+        </label>
+      </li>
+      <li>
+        <a href="/home">
+          Almost Material
+          <span class="badge badge-warning">in dev</span>
+        </a>
+      </li>
+      <li class="flex items-center">
+        <div class="dropdown">
+          <button tabindex="0" class="btn btn-ghost btn-sm">
+            0.0.0
+            <span class="material-icons-round">expand_more</span>
+          </button>
+          <div tabindex="0" class="dropdown-content card z-[1]">
+            <ul class="menu menu-sm w-56">
+              <li>
+                <a routerLink="#">
+                  0.0.0
+                  <span></span>
+                  <span class="badge badge-warning">In Dev</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="input input-text w-96  inline-block">
+      <input type="text" placeholder=" ">
+      <label class="input-placeholder">Search</label>
+    </div>
+  </div>
+
+  <!-- navbar end -->
+  <div class="navbar-end">
+    <ul class="menu menu-horizontal">
+      <li>
+        <a href="https://github.com/Cramzzzberry/almost-material-plugin" target="_blank">
+          Github
+          <span class="badge badge-warning">In Dev</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

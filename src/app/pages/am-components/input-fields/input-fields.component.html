@@ -1,0 +1,190 @@
+<div class="card px-24 py-32 mb-4">
+  <h1 class="font-bold">Input Fields</h1>
+  <h4>Lets the user take specific inputs</h4>
+</div>
+
+<div class="flex flex-col gap-2">
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Text Fields'"
+    [preview]="textFields"
+    [htmlCode]="snippets['text fields'].htmlCode"
+    [jsxCode]="snippets['text fields'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Text Field with colors'"
+    [preview]="textFieldsWithColors"
+    [htmlCode]="snippets['text fields with colors'].htmlCode"
+    [jsxCode]="snippets['text fields with colors'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Disabled Text Field'"
+    [preview]="disabledTextField"
+    [htmlCode]="snippets['disabled text field'].htmlCode"
+    [jsxCode]="snippets['disabled text field'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Date and Time Field'"
+    [preview]="dateAndTimeField"
+    [htmlCode]="snippets['date and time field'].htmlCode"
+    [jsxCode]="snippets['date and time field'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Date Field with colors'"
+    [preview]="dateFieldWithColors"
+    [htmlCode]="snippets['date field with colors'].htmlCode"
+    [jsxCode]="snippets['date field with colors'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Time Field with colors'"
+    [preview]="timeFieldWithColors"
+    [htmlCode]="snippets['time field with colors'].htmlCode"
+    [jsxCode]="snippets['time field with colors'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Disabled Date and Time Field'"
+    [preview]="disabledDateAndTimeField"
+    [htmlCode]="snippets['disabled date and time field'].htmlCode"
+    [jsxCode]="snippets['disabled date and time field'].jsxCode" >
+  </app-tabs>
+</div>
+
+<ng-template #textFields>
+  <div class="input input-text">
+    <input placeholder=" " type="text">
+    <label class="input-placeholder">Text</label>
+  </div>
+  <div class="input input-text">
+    <input placeholder=" " type="number">
+    <label class="input-placeholder">Number</label>
+  </div>
+  <div class="input input-text">
+    <input placeholder=" " type="password">
+    <label class="input-placeholder">Password</label>
+  </div>
+</ng-template>
+
+<ng-template #textFieldsWithColors>
+  <!-- default -->
+  <div class="input input-text">
+    <input placeholder=" " type="text">
+    <label class="input-placeholder">Default</label>
+  </div>
+  
+  <!-- primary -->
+  <div class="input input-text input-primary">
+    <input placeholder=" " type="text">
+    <label class="input-placeholder">Primary</label>
+  </div>
+  
+  <!-- secondary -->
+  <div class="input input-text input-secondary">
+    <input placeholder=" " type="text">
+    <label class="input-placeholder">Secondary</label>
+  </div>
+  
+  <!-- teriary -->
+  <div class="input input-text input-tertiary">
+    <input placeholder=" " type="text">
+    <label class="input-placeholder">Tertiary</label>
+  </div>
+  
+  <!-- info -->
+  <div class="input input-text input-info">
+    <input placeholder=" " type="text">
+    <label class="input-placeholder">Info</label>
+  </div>
+  
+  <!-- warning -->
+  <div class="input input-text input-warning">
+    <input placeholder=" " type="text">
+    <label class="input-placeholder">Warning</label>
+  </div>
+  
+  <!-- success -->
+  <div class="input input-text input-success">
+    <input placeholder=" " type="text">
+    <label class="input-placeholder">Success</label>
+  </div>
+  
+  <!-- error -->
+  <div class="input input-text input-error">
+    <input placeholder=" " type="text">
+    <label class="input-placeholder">Error</label>
+  </div>
+</ng-template>
+
+<ng-template #disabledTextField>
+  <div class="input input-text">
+    <input placeholder=" " type="text" disabled="disabled">
+    <label class="input-placeholder">Text</label>
+  </div>
+</ng-template>
+
+<ng-template #dateAndTimeField>
+  <input type="date" class="input">
+  <input type="time" class="input">
+</ng-template>
+
+<ng-template #dateFieldWithColors>
+  <!-- default -->
+  <input type="date" class="input">
+  
+  <!-- primary -->
+  <input type="date" class="input input-primary">
+  
+  <!-- secondary -->
+  <input type="date" class="input input-secondary">
+  
+  <!-- tertiary -->
+  <input type="date" class="input input-tertiary">
+  
+  <!-- info -->
+  <input type="date" class="input input-info">
+  
+  <!-- warning -->
+  <input type="date" class="input input-warning">
+  
+  <!-- success -->
+  <input type="date" class="input input-success">
+  
+  <!-- error -->
+  <input type="date" class="input input-error">
+</ng-template>
+
+<ng-template #timeFieldWithColors>
+  <!-- default -->
+  <input type="time" class="input">
+  
+  <!-- primary -->
+  <input type="time" class="input input-primary">
+  
+  <!-- secondary -->
+  <input type="time" class="input input-secondary">
+  
+  <!-- tertiary -->
+  <input type="time" class="input input-tertiary">
+  
+  <!-- info -->
+  <input type="time" class="input input-info">
+  
+  <!-- warning -->
+  <input type="time" class="input input-warning">
+  
+  <!-- success -->
+  <input type="time" class="input input-success">
+  
+  <!-- error -->
+  <input type="time" class="input input-error">
+</ng-template>
+
+<ng-template #disabledDateAndTimeField>
+  <input type="date" disabled="disabled" class="input">
+  <input type="time" disabled="disabled" class="input">
+</ng-template>

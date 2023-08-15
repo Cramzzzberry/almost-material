@@ -1,0 +1,95 @@
+<div class="card px-24 py-32 mb-4">
+  <h1 class="font-bold">Switch</h1>
+  <h4>A toggle used for on and off purposes</h4>
+</div>
+
+<div class="flex flex-col gap-2">
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Switch'"
+    [preview]="switch"
+    [htmlCode]="snippets['switch'].htmlCode"
+    [jsxCode]="snippets['switch'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Switch with colors'"
+    [preview]="switchWithColors"
+    [htmlCode]="snippets['switch with colors'].htmlCode"
+    [jsxCode]="snippets['switch with colors'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Switch in different sizes'"
+    [preview]="switchSizes"
+    [htmlCode]="snippets['switch in different sizes'].htmlCode"
+    [jsxCode]="snippets['switch in different sizes'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Disabled Switch'"
+    [preview]="disabledSwitch"
+    [htmlCode]="snippets['disabled switch'].htmlCode"
+    [jsxCode]="snippets['disabled switch'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Indeterminate Switch'"
+    [preview]="IndeterminateSwitch"
+    [htmlCode]="snippets['indeterminate switch'].htmlCode"
+    [jsxCode]="snippets['indeterminate switch'].jsxCode" >
+  </app-tabs>
+</div>
+
+<ng-template #switch>
+  <input type="checkbox" checked class="switch">
+</ng-template>
+
+<ng-template #switchWithColors>
+  <!-- default -->
+  <input type="checkbox" checked class="switch">
+
+  <!-- primary -->
+  <input type="checkbox" checked class="switch switch-primary">
+
+  <!-- secondary -->
+  <input type="checkbox" checked class="switch switch-secondary">
+
+  <!-- tertiary -->
+  <input type="checkbox" checked class="switch switch-tertiary">
+
+  <!-- info -->
+  <input type="checkbox" checked class="switch switch-info">
+
+  <!-- warning -->
+  <input type="checkbox" checked class="switch switch-warning">
+
+  <!-- success -->
+  <input type="checkbox" checked class="switch switch-success">
+
+  <!-- error -->
+  <input type="checkbox" checked class="switch switch-error">
+</ng-template>
+
+<ng-template #switchSizes>
+  <!-- small -->
+  <input type="checkbox" checked class="switch switch-sm">
+
+  <!-- default -->
+  <input type="checkbox" checked class="switch switch-md">
+
+  <!-- large -->
+  <input type="checkbox" checked class="switch switch-lg">
+
+  <!-- xl -->
+  <input type="checkbox" checked class="switch switch-xl">
+</ng-template>
+
+<ng-template #disabledSwitch>
+  <input type="checkbox" disabled class="switch">
+  <input type="checkbox" checked disabled class="switch">
+</ng-template>
+
+<ng-template #IndeterminateSwitch>
+  <div class="switch after:left-[calc(50%-0.875rem/2)]"></div>
+</ng-template>

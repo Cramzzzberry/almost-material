@@ -1,0 +1,64 @@
+<div class="card px-24 py-32 mb-4">
+  <h1 class="font-bold">Modal</h1>
+  <h4>A pop up window that disables other interactions except itself</h4>
+</div>
+
+<div class="flex flex-col gap-2">
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Modal'"
+    [preview]="modal"
+    [htmlCode]="snippets['modal'].htmlCode"
+    [jsxCode]="snippets['modal'].jsxCode" >
+  </app-tabs>
+  <app-tabs
+    [putCard]="'yes'"
+    [variantName]="'Modal that closes on outside click'"
+    [preview]="modalThatClosesOnOutsideClick"
+    [htmlCode]="snippets['modal that closes on outside click'].htmlCode"
+    [jsxCode]="snippets['modal that closes on outside click'].jsxCode" >
+  </app-tabs>
+</div>
+
+<ng-template #modal>
+  <label for="myModal" class="btn">Click Me</label>
+
+  <input class="modal-toggle" type="checkbox" id="myModal" />
+  <div class="modal">
+    <div class="modal-content">
+      <div class="card w-[26.25rem]">
+        <!-- card body -->
+        <div class="card-body">
+          <h4 class="card-title">Woah a Dialog!</h4>
+          <span>Put your own description here that gives more details about this dialog.</span>
+        </div>
+      
+        <!-- card actions -->
+        <div class="card-actions justify-end">
+          <label for="myModal" class="btn btn-ghost">close</label>
+          <label for="myModal" class="btn">ok</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #modalThatClosesOnOutsideClick>
+  <label for="myModal1" class="btn">Click Me</label>
+
+  <input class="modal-toggle" type="checkbox" id="myModal1" />
+  <div class="modal">
+    <div class="modal-content">
+      <div class="card w-[26.25rem]">
+        <!-- card body -->
+        <div class="card-body text-center">
+          <h4 class="card-title">Done!</h4>
+          <span>Click on outside to close.</span>
+        </div>
+      </div>
+
+      <!-- the label for closing the modal -->
+      <label for="myModal1" class="modal-backdrop"></label>
+    </div>
+  </div>
+</ng-template>
