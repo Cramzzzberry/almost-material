@@ -8,7 +8,7 @@
         </label>
       </li>
       <li [ngClass]="{ 'xl:hidden' : !isHomepage() }">
-        <a href="/home">
+        <a routerLink="/home">
           Almost Material
         </a>
       </li>
@@ -19,7 +19,7 @@
   <div class="navbar-end">
     <ul class="menu menu-horizontal">
       <li *ngIf="isHomepage()">
-        <a href="/documentation/how-to-install">
+        <a routerLink="/documentation/how-to-install">
           <span class="material-icons-round">
             library_books
           </span>
