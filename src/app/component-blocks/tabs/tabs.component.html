@@ -2,22 +2,38 @@
   <h4 class="font-semibold">{{ variantName }}</h4>
 
   <div class="flex flex-row gap-2">
-    <button [ngClass]="{'btn-active' : tabState === 0, 'btn-ghost' : tabState !== 0}" class="btn btn-sm" (click)="showTab(0)">preview</button>
-    <button [ngClass]="{'btn-active' : tabState === 1, 'btn-ghost' : tabState !== 1}" class="btn btn-sm" (click)="showTab(1)">HTML</button>
-    <button [ngClass]="{'btn-active' : tabState === 2, 'btn-ghost' : tabState !== 2}" class="btn btn-sm" (click)="showTab(2)">JSX</button>
+    <button class="btn btn-sm" [ngClass]="{'btn-active' : tabState === 0, 'btn-ghost' : tabState !== 0}" (click)="showTab(0)">preview</button>
+    <button class="btn btn-sm" [ngClass]="{'btn-active' : tabState === 1, 'btn-ghost' : tabState !== 1}" (click)="showTab(1)">HTML</button>
+    <button class="btn btn-sm" [ngClass]="{'btn-active' : tabState === 2, 'btn-ghost' : tabState !== 2}" (click)="showTab(2)">JSX</button>
   </div>
 </div>
 
-<div *ngIf="putCard === 'yes'" [ngClass]="tabState === 0 ? 'flex' : 'hidden'" class="card gap-2 p-4 flex-wrap justify-center items-center min-h-[5.5rem]">
+<div *ngIf="tabState === 0 && putCard === 'yes'" class="card gap-2 p-4 flex flex-wrap justify-center items-center min-h-[5.5rem]">
   <ng-template [ngTemplateOutlet]="preview"></ng-template>
 </div>
 
-<ng-template *ngIf="putCard === 'no'" [ngTemplateOutlet]="preview"></ng-template>
+<ng-template *ngIf="tabState === 0 && putCard === 'no'" [ngTemplateOutlet]="preview"></ng-template>
 
-<pre [ngClass]="tabState === 1 ? 'block' : 'hidden'" class="card p-4">
+<div *ngIf="tabState === 1" class="card relative overflow-y-hidden">
+<pre class="!my-0">
 <code class="language-html">{{ htmlCode }}</code>
 </pre>
 
-<pre [ngClass]="tabState === 2 ? 'block' : 'hidden'" class="card p-4">
+  <button class="btn btn-circle btn-ghost btn-tertiary-50 btn-sm absolute top-[0.5rem] right-[0.5rem]" (click)="copyToClipboard(htmlCode)">
+    <span class="material-icons-round">
+      content_copy
+    </span>
+  </button>
+</div>
+
+<div *ngIf="tabState === 2" class="card relative overflow-y-hidden">
+<pre class="!my-0">
 <code class="language-jsx">{{ jsxCode }}</code>
 </pre>
+
+  <button class="btn btn-circle btn-ghost btn-tertiary-50 btn-sm absolute top-[0.5rem] right-[0.5rem]" (click)="copyToClipboard(jsxCode)">
+    <span class="material-icons-round">
+      content_copy
+    </span>
+  </button>
+</div>
