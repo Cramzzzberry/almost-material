@@ -42,7 +42,7 @@ export class AppComponent {
       ]
     },
     {
-      title: 'Containment',
+      title: 'Container',
       routes: [
         {
           name: 'Card',
