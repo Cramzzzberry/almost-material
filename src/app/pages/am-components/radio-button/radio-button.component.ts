@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 export class RadioButtonComponent {
   snippets= {
     'radio button': {
-      htmlCode: '',
-      jsxCode: '',
+      htmlCode: '<input type=\"radio\" name=\"radio\" class=\"radio\">\n<input type=\"radio\" name=\"radio\" checked class=\"radio\">',
+      jsxCode: '<input type=\"radio\" name=\"radio\" className=\"radio\" />\n<input type=\"radio\" name=\"radio\" defaultChecked className=\"radio\" />',
     },
     'radio button in different colors': {
       htmlCode: '<!-- default -->\n<input type=\"radio\" name=\"default\" class=\"radio\">\n<input type=\"radio\" name=\"default\" checked class=\"radio\">\n\n<!-- primary -->\n<input type=\"radio\" name=\"primary\" class=\"radio radio-primary\">\n<input type=\"radio\" name=\"primary\" checked class=\"radio radio-primary\">\n\n<!-- secondary -->\n<input type=\"radio\" name=\"secondary\" class=\"radio radio-secondary\">\n<input type=\"radio\" name=\"secondary\" checked class=\"radio radio-secondary\">\n\n<!-- tertiary -->\n<input type=\"radio\" name=\"tertiary\" class=\"radio radio-tertiary\">\n<input type=\"radio\" name=\"tertiary\" checked class=\"radio radio-tertiary\">\n\n<!-- info -->\n<input type=\"radio\" name=\"info\" class=\"radio radio-info\">\n<input type=\"radio\" name=\"info\" checked class=\"radio radio-info\">\n\n<!-- warning -->\n<input type=\"radio\" name=\"warning\" class=\"radio radio-warning\">\n<input type=\"radio\" name=\"warning\" checked class=\"radio radio-warning\">\n\n<!-- success -->\n<input type=\"radio\" name=\"success\" class=\"radio radio-success\">\n<input type=\"radio\" name=\"success\" checked class=\"radio radio-success\">\n\n<!-- error -->\n<input type=\"radio\" name=\"error\" class=\"radio radio-error\">\n<input type=\"radio\" name=\"error\" checked class=\"radio radio-error\">',
