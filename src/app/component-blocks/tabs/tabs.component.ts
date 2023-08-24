@@ -13,6 +13,7 @@ export class TabsComponent implements AfterViewChecked {
   @Input() htmlCode!: string;
   @Input() jsxCode!: string;
   @Input() putCard!: string;
+  @Input() id!: string;
 
   tabState: number = 0;
 

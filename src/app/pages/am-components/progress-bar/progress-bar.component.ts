@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollToService } from '../../../services/scroll-to.service'
 
 @Component({
   selector: 'app-progress-bar',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./progress-bar.component.css']
 })
 export class ProgressBarComponent {
+  constructor(private scrollToService: ScrollToService) {}
+  stService = this.scrollToService;
+
   snippets = {
     'progress bar': {
       htmlCode: '<span class=\"progress\" style=\"--value: 5; --max: 10;\"></span>',

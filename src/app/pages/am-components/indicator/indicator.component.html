@@ -1,79 +1,108 @@
-<div class="card px-24 py-32 mb-4">
-  <h1 class="font-bold">Indicator</h1>
-  <h4>It positions the element to indicator state</h4>
-</div>
+<div class="flex flex-row">
+  <!-- main content -->
+  <div class="flex-1 max-w-[calc(100%-26rem)] pl-4 py-4">
+    <div class="card px-24 py-32 mb-4">
+      <h1 class="font-bold">Indicator</h1>
+      <h4>It positions the element to indicator state</h4>
+    </div>
+    
+    <div class="flex flex-col gap-2">
+      <app-tabs
+        [id]="'indicator'"
+        [putCard]="'yes'"
+        [variantName]="'Indicator'"
+        [preview]="indicator"
+        [htmlCode]="snippets['indicator'].htmlCode"
+        [jsxCode]="snippets['indicator'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'indicatorTopLeft'"
+        [putCard]="'yes'"
+        [variantName]="'Indicator on top left'"
+        [preview]="indicatorOnTopLeft"
+        [htmlCode]="snippets['indicator on top left'].htmlCode"
+        [jsxCode]="snippets['indicator on top left'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'indicatorTopCenter'"
+        [putCard]="'yes'"
+        [variantName]="'Indicator on top center'"
+        [preview]="indicatorOnTopCenter"
+        [htmlCode]="snippets['indicator on top center'].htmlCode"
+        [jsxCode]="snippets['indicator on top center'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'indicatorTopRight'"
+        [putCard]="'yes'"
+        [variantName]="'Indicator on top right'"
+        [preview]="indicatorOnTopRight"
+        [htmlCode]="snippets['indicator on top right'].htmlCode"
+        [jsxCode]="snippets['indicator on top right'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'indicatorMiddleLeft'"
+        [putCard]="'yes'"
+        [variantName]="'Indicator on middle left'"
+        [preview]="indicatorOnMiddleLeft"
+        [htmlCode]="snippets['indicator on middle left'].htmlCode"
+        [jsxCode]="snippets['indicator on middle left'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'indicatorMiddleCenter'"
+        [putCard]="'yes'"
+        [variantName]="'Indicator on middle center'"
+        [preview]="indicatorOnMiddleCenter"
+        [htmlCode]="snippets['indicator on middle center'].htmlCode"
+        [jsxCode]="snippets['indicator on middle center'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'indicatorMiddleRight'"
+        [putCard]="'yes'"
+        [variantName]="'Indicator on middle right'"
+        [preview]="indicatorOnMiddleRight"
+        [htmlCode]="snippets['indicator on middle right'].htmlCode"
+        [jsxCode]="snippets['indicator on middle right'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'indicatorBottomLeft'"
+        [putCard]="'yes'"
+        [variantName]="'Indicator on bottom left'"
+        [preview]="indicatorOnBottomLeft"
+        [htmlCode]="snippets['indicator on bottom left'].htmlCode"
+        [jsxCode]="snippets['indicator on bottom left'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'indicatorBottomCenter'"
+        [putCard]="'yes'"
+        [variantName]="'Indicator on bottom center'"
+        [preview]="indicatorOnBottomCenter"
+        [htmlCode]="snippets['indicator on bottom center'].htmlCode"
+        [jsxCode]="snippets['indicator on bottom center'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'indicatorBottomRight'"
+        [putCard]="'yes'"
+        [variantName]="'Indicator on bottom right'"
+        [preview]="indicatorOnBottomRight"
+        [htmlCode]="snippets['indicator on bottom right'].htmlCode"
+        [jsxCode]="snippets['indicator on bottom right'].jsxCode" >
+      </app-tabs>
+    </div>
+  </div>
 
-<div class="flex flex-col gap-2">
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Indicator'"
-    [preview]="indicator"
-    [htmlCode]="snippets['indicator'].htmlCode"
-    [jsxCode]="snippets['indicator'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Indicator on top left'"
-    [preview]="indicatorOnTopLeft"
-    [htmlCode]="snippets['indicator on top left'].htmlCode"
-    [jsxCode]="snippets['indicator on top left'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Indicator on top center'"
-    [preview]="indicatorOnTopCenter"
-    [htmlCode]="snippets['indicator on top center'].htmlCode"
-    [jsxCode]="snippets['indicator on top center'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Indicator on top right'"
-    [preview]="indicatorOnTopRight"
-    [htmlCode]="snippets['indicator on top right'].htmlCode"
-    [jsxCode]="snippets['indicator on top right'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Indicator on middle left'"
-    [preview]="indicatorOnMiddleLeft"
-    [htmlCode]="snippets['indicator on middle left'].htmlCode"
-    [jsxCode]="snippets['indicator on middle left'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Indicator on middle center'"
-    [preview]="indicatorOnMiddleCenter"
-    [htmlCode]="snippets['indicator on middle center'].htmlCode"
-    [jsxCode]="snippets['indicator on middle center'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Indicator on middle right'"
-    [preview]="indicatorOnMiddleRight"
-    [htmlCode]="snippets['indicator on middle right'].htmlCode"
-    [jsxCode]="snippets['indicator on middle right'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Indicator on bottom left'"
-    [preview]="indicatorOnBottomLeft"
-    [htmlCode]="snippets['indicator on bottom left'].htmlCode"
-    [jsxCode]="snippets['indicator on bottom left'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Indicator on bottom center'"
-    [preview]="indicatorOnBottomCenter"
-    [htmlCode]="snippets['indicator on bottom center'].htmlCode"
-    [jsxCode]="snippets['indicator on bottom center'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Indicator on bottom right'"
-    [preview]="indicatorOnBottomRight"
-    [htmlCode]="snippets['indicator on bottom right'].htmlCode"
-    [jsxCode]="snippets['indicator on bottom right'].jsxCode" >
-  </app-tabs>
+  <!-- side content -->
+  <ul class="basis-[26rem] h-[calc(100vh-4.25rem)] sticky top-[calc(4.25rem)] menu overflow-y-auto">
+    <li (click)="stService.scroll('indicator')"><a class="normal-case"># Indicator</a></li>
+    <li (click)="stService.scroll('indicatorTopLeft')"><a class="normal-case"># Indicator on top left</a></li>
+    <li (click)="stService.scroll('indicatorTopCenter')"><a class="normal-case"># Indicator on top center</a></li>
+    <li (click)="stService.scroll('indicatorTopRight')"><a class="normal-case"># Indicator on top right</a></li>
+    <li (click)="stService.scroll('indicatorMiddleLeft')"><a class="normal-case"># Indicator on middle left</a></li>
+    <li (click)="stService.scroll('indicatorMiddleCenter')"><a class="normal-case"># Indicator on middle center</a></li>
+    <li (click)="stService.scroll('indicatorMiddleRight')"><a class="normal-case"># Indicator on middle right</a></li>
+    <li (click)="stService.scroll('indicatorBottomLeft')"><a class="normal-case"># Indicator on bottom left</a></li>
+    <li (click)="stService.scroll('indicatorBottomCenter')"><a class="normal-case"># Indicator on bottom center</a></li>
+    <li (click)="stService.scroll('indicatorBottomRight')"><a class="normal-case"># Indicator on bottom right</a></li>
+  </ul>
 </div>
 
 <ng-template #indicator>

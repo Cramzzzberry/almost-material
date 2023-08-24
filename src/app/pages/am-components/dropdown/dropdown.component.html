@@ -1,72 +1,99 @@
-<div class="card px-24 py-32 mb-4">
-  <h1 class="font-bold">Dropdown Menu</h1>
-  <h4>Gives users a list of contents, choices or links that floats around the button</h4>
-</div>
+<div class="flex flex-row">
+  <!-- main content -->
+  <div class="flex-1 max-w-[calc(100%-26rem)] pl-4 py-4">
+    <div class="card px-24 py-32 mb-4">
+      <h1 class="font-bold">Dropdown Menu</h1>
+      <h4>Gives users a list of contents, choices or links that floats around the button</h4>
+    </div>
+    
+    <div class="flex flex-col gap-2">
+      <app-tabs
+        [id]="'dropdown'"
+        [putCard]="'no'"
+        [variantName]="'Dropdown'"
+        [preview]="dropdown"
+        [htmlCode]="snippets['dropdown'].htmlCode"
+        [jsxCode]="snippets['dropdown'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'dropdownTop'"
+        [putCard]="'no'"
+        [variantName]="'Dropdown Top'"
+        [preview]="dropdownTop"
+        [htmlCode]="snippets['dropdown top'].htmlCode"
+        [jsxCode]="snippets['dropdown top'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'dropdownTopEnd'"
+        [putCard]="'no'"
+        [variantName]="'Dropdown Top aligned to end'"
+        [preview]="dropdownTopAlignedToEnd"
+        [htmlCode]="snippets['dropdown top aligned to end'].htmlCode"
+        [jsxCode]="snippets['dropdown top aligned to end'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'dropdownBottom'"
+        [putCard]="'no'"
+        [variantName]="'Dropdown Bottom'"
+        [preview]="dropdownBottom"
+        [htmlCode]="snippets['dropdown bottom'].htmlCode"
+        [jsxCode]="snippets['dropdown bottom'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'dropdownBottomEnd'"
+        [putCard]="'no'"
+        [variantName]="'Dropdown Bottom aligned to end'"
+        [preview]="dropdownBottomAlignedToEnd"
+        [htmlCode]="snippets['dropdown bottom aligned to end'].htmlCode"
+        [jsxCode]="snippets['dropdown bottom aligned to end'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'dropdownLeft'"
+        [putCard]="'no'"
+        [variantName]="'Dropdown Left'"
+        [preview]="dropdownLeft"
+        [htmlCode]="snippets['dropdown left'].htmlCode"
+        [jsxCode]="snippets['dropdown left'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'dropdownLeftEnd'"
+        [putCard]="'no'"
+        [variantName]="'Dropdown Left aligned to end'"
+        [preview]="dropdownLeftAlignedToEnd"
+        [htmlCode]="snippets['dropdown left aligned to end'].htmlCode"
+        [jsxCode]="snippets['dropdown left aligned to end'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'dropdownRight'"
+        [putCard]="'no'"
+        [variantName]="'Dropdown Right'"
+        [preview]="dropdownRight"
+        [htmlCode]="snippets['dropdown right'].htmlCode"
+        [jsxCode]="snippets['dropdown right'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'dropdownRightEnd'"
+        [putCard]="'no'"
+        [variantName]="'Dropdown Right Aligned To End'"
+        [preview]="dropdownRightAlignedToEnd"
+        [htmlCode]="snippets['dropdown right aligned to end'].htmlCode"
+        [jsxCode]="snippets['dropdown right aligned to end'].jsxCode" >
+      </app-tabs>
+    </div>
+  </div>
 
-<div class="flex flex-col gap-2">
-  <app-tabs
-    [putCard]="'no'"
-    [variantName]="'Dropdown'"
-    [preview]="dropdown"
-    [htmlCode]="snippets['dropdown'].htmlCode"
-    [jsxCode]="snippets['dropdown'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'no'"
-    [variantName]="'Dropdown Top'"
-    [preview]="dropdownTop"
-    [htmlCode]="snippets['dropdown top'].htmlCode"
-    [jsxCode]="snippets['dropdown top'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'no'"
-    [variantName]="'Dropdown Top aligned to end'"
-    [preview]="dropdownTopAlignedToEnd"
-    [htmlCode]="snippets['dropdown top aligned to end'].htmlCode"
-    [jsxCode]="snippets['dropdown top aligned to end'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'no'"
-    [variantName]="'Dropdown Bottom'"
-    [preview]="dropdownBottom"
-    [htmlCode]="snippets['dropdown bottom'].htmlCode"
-    [jsxCode]="snippets['dropdown bottom'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'no'"
-    [variantName]="'Dropdown Bottom aligned to end'"
-    [preview]="dropdownBottomAlignedToEnd"
-    [htmlCode]="snippets['dropdown bottom aligned to end'].htmlCode"
-    [jsxCode]="snippets['dropdown bottom aligned to end'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'no'"
-    [variantName]="'Dropdown Left'"
-    [preview]="dropdownLeft"
-    [htmlCode]="snippets['dropdown left'].htmlCode"
-    [jsxCode]="snippets['dropdown left'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'no'"
-    [variantName]="'Dropdown Left aligned to end'"
-    [preview]="dropdownLeftAlignedToEnd"
-    [htmlCode]="snippets['dropdown left aligned to end'].htmlCode"
-    [jsxCode]="snippets['dropdown left aligned to end'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'no'"
-    [variantName]="'Dropdown Right'"
-    [preview]="dropdownRight"
-    [htmlCode]="snippets['dropdown right'].htmlCode"
-    [jsxCode]="snippets['dropdown right'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'no'"
-    [variantName]="'Dropdown Right Aligned To End'"
-    [preview]="dropdownRightAlignedToEnd"
-    [htmlCode]="snippets['dropdown right aligned to end'].htmlCode"
-    [jsxCode]="snippets['dropdown right aligned to end'].jsxCode" >
-  </app-tabs>
+  <!-- side content -->
+  <ul class="basis-[26rem] h-[calc(100vh-4.25rem)] sticky top-[calc(4.25rem)] menu overflow-y-auto">
+    <li (click)="stService.scroll('dropdown')"><a class="normal-case"># Dropdown</a></li>
+    <li (click)="stService.scroll('dropdownTop')"><a class="normal-case"># Dropdown Top</a></li>
+    <li (click)="stService.scroll('dropdownTopEnd')"><a class="normal-case"># Dropdown Top aligned to end</a></li>
+    <li (click)="stService.scroll('dropdownBottom')"><a class="normal-case"># Dropdown Bottom</a></li>
+    <li (click)="stService.scroll('dropdownBottomEnd')"><a class="normal-case"># Dropdown Bottom aligned to end</a></li>
+    <li (click)="stService.scroll('dropdownLeft')"><a class="normal-case"># Dropdown Left</a></li>
+    <li (click)="stService.scroll('dropdownLeftEnd')"><a class="normal-case"># Dropdown Left aligned to end</a></li>
+    <li (click)="stService.scroll('dropdownRight')"><a class="normal-case"># Dropdown Right</a></li>
+    <li (click)="stService.scroll('dropdownRightEnd')"><a class="normal-case"># Dropdown Right aligned to end</a></li>
+  </ul>
 </div>
 
 <ng-template #dropdown>

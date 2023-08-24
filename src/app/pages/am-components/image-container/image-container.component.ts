@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollToService } from '../../../services/scroll-to.service'
 
 @Component({
   selector: 'app-image-container',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./image-container.component.css']
 })
 export class ImageContainerComponent {
+  constructor(private scrollToService: ScrollToService) {}
+  stService = this.scrollToService;
+
   snippets = {
     'a square image': {
       htmlCode: '<div class=\"image\" style=\"--image-url: url(\'https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=1380\&t=st=1691415133~exp=1691415733~hmac=8c0f40e6bc18926c38bf4a1b65b2f5740122592b25fbcc5241b9e17308598a00\')\"></div>',

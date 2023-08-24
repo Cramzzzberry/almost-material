@@ -1,58 +1,81 @@
-<div class="card px-24 py-32 mb-4">
-  <h1 class="font-bold">Input Fields</h1>
-  <h4>Lets the user take text, date or time inputs</h4>
-</div>
+<div class="flex flex-row">
+  <!-- main content -->
+  <div class="flex-1 max-w-[calc(100%-26rem)] pl-4 py-4">
+    <div class="card px-24 py-32 mb-4">
+      <h1 class="font-bold">Input Fields</h1>
+      <h4>Lets the user take text, date or time inputs</h4>
+    </div>
+    
+    <div class="flex flex-col gap-2">
+      <app-tabs
+        [id]="'textFields'"
+        [putCard]="'yes'"
+        [variantName]="'Text Fields'"
+        [preview]="textFields"
+        [htmlCode]="snippets['text fields'].htmlCode"
+        [jsxCode]="snippets['text fields'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'textFieldWithColors'"
+        [putCard]="'yes'"
+        [variantName]="'Text Field with colors'"
+        [preview]="textFieldsWithColors"
+        [htmlCode]="snippets['text fields with colors'].htmlCode"
+        [jsxCode]="snippets['text fields with colors'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'disabledTextField'"
+        [putCard]="'yes'"
+        [variantName]="'Disabled Text Field'"
+        [preview]="disabledTextField"
+        [htmlCode]="snippets['disabled text field'].htmlCode"
+        [jsxCode]="snippets['disabled text field'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'dateAndTimeField'"
+        [putCard]="'yes'"
+        [variantName]="'Date and Time Field'"
+        [preview]="dateAndTimeField"
+        [htmlCode]="snippets['date and time field'].htmlCode"
+        [jsxCode]="snippets['date and time field'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'dateAndTimeFieldWithColors'"
+        [putCard]="'yes'"
+        [variantName]="'Date Field with colors'"
+        [preview]="dateFieldWithColors"
+        [htmlCode]="snippets['date field with colors'].htmlCode"
+        [jsxCode]="snippets['date field with colors'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'timeFieldWithColors'"
+        [putCard]="'yes'"
+        [variantName]="'Time Field with colors'"
+        [preview]="timeFieldWithColors"
+        [htmlCode]="snippets['time field with colors'].htmlCode"
+        [jsxCode]="snippets['time field with colors'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+       [id]="'disabledDateAndTimeField'"
+        [putCard]="'yes'"
+        [variantName]="'Disabled Date and Time Field'"
+        [preview]="disabledDateAndTimeField"
+        [htmlCode]="snippets['disabled date and time field'].htmlCode"
+        [jsxCode]="snippets['disabled date and time field'].jsxCode" >
+      </app-tabs>
+    </div>
+  </div>
 
-<div class="flex flex-col gap-2">
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Text Fields'"
-    [preview]="textFields"
-    [htmlCode]="snippets['text fields'].htmlCode"
-    [jsxCode]="snippets['text fields'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Text Field with colors'"
-    [preview]="textFieldsWithColors"
-    [htmlCode]="snippets['text fields with colors'].htmlCode"
-    [jsxCode]="snippets['text fields with colors'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Disabled Text Field'"
-    [preview]="disabledTextField"
-    [htmlCode]="snippets['disabled text field'].htmlCode"
-    [jsxCode]="snippets['disabled text field'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Date and Time Field'"
-    [preview]="dateAndTimeField"
-    [htmlCode]="snippets['date and time field'].htmlCode"
-    [jsxCode]="snippets['date and time field'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Date Field with colors'"
-    [preview]="dateFieldWithColors"
-    [htmlCode]="snippets['date field with colors'].htmlCode"
-    [jsxCode]="snippets['date field with colors'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Time Field with colors'"
-    [preview]="timeFieldWithColors"
-    [htmlCode]="snippets['time field with colors'].htmlCode"
-    [jsxCode]="snippets['time field with colors'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Disabled Date and Time Field'"
-    [preview]="disabledDateAndTimeField"
-    [htmlCode]="snippets['disabled date and time field'].htmlCode"
-    [jsxCode]="snippets['disabled date and time field'].jsxCode" >
-  </app-tabs>
+  <!-- side content -->
+  <ul class="basis-[26rem] h-[calc(100vh-4.25rem)] sticky top-[calc(4.25rem)] menu overflow-y-auto">
+    <li (click)="stService.scroll('textFields')"><a class="normal-case"># Text Fields</a></li>
+    <li (click)="stService.scroll('textFieldWithColors')"><a class="normal-case"># Text Field with colors</a></li>
+    <li (click)="stService.scroll('disabledTextField')"><a class="normal-case"># Disabled Text Field</a></li>
+    <li (click)="stService.scroll('dateAndTimeField')"><a class="normal-case"># Date and Time Field</a></li>
+    <li (click)="stService.scroll('dateAndTimeFieldWithColors')"><a class="normal-case"># Date Field with colors</a></li>
+    <li (click)="stService.scroll('timeFieldWithColors')"><a class="normal-case"># Time Field with colors</a></li>
+    <li (click)="stService.scroll('disabledDateAndTimeField')"><a class="normal-case"># Disabled Date and Time Field</a></li>
+  </ul>
 </div>
 
 <ng-template #textFields>

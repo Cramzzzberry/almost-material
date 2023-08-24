@@ -1,23 +1,36 @@
-<div class="card px-24 py-32 mb-4">
-  <h1 class="font-bold">Modal</h1>
-  <h4>A pop up window that disables other interactions except itself</h4>
-</div>
+<div class="flex flex-row">
+  <!-- main content -->
+  <div class="flex-1 max-w-[calc(100%-26rem)] pl-4 py-4">
+    <div class="card px-24 py-32 mb-4">
+      <h1 class="font-bold">Modal</h1>
+      <h4>A pop up window that disables other interactions except itself</h4>
+    </div>
+    
+    <div class="flex flex-col gap-2">
+      <app-tabs
+        [id]="'modal'"
+        [putCard]="'yes'"
+        [variantName]="'Modal'"
+        [preview]="modal"
+        [htmlCode]="snippets['modal'].htmlCode"
+        [jsxCode]="snippets['modal'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'modalOutside'"
+        [putCard]="'yes'"
+        [variantName]="'Modal that closes on outside click'"
+        [preview]="modalThatClosesOnOutsideClick"
+        [htmlCode]="snippets['modal that closes on outside click'].htmlCode"
+        [jsxCode]="snippets['modal that closes on outside click'].jsxCode" >
+      </app-tabs>
+    </div>
+  </div>
 
-<div class="flex flex-col gap-2">
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Modal'"
-    [preview]="modal"
-    [htmlCode]="snippets['modal'].htmlCode"
-    [jsxCode]="snippets['modal'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Modal that closes on outside click'"
-    [preview]="modalThatClosesOnOutsideClick"
-    [htmlCode]="snippets['modal that closes on outside click'].htmlCode"
-    [jsxCode]="snippets['modal that closes on outside click'].jsxCode" >
-  </app-tabs>
+  <!-- side content -->
+  <ul class="basis-[26rem] h-[calc(100vh-4.25rem)] sticky top-[calc(4.25rem)] menu overflow-y-auto">
+    <li (click)="stService.scroll('modal')"><a class="normal-case"># Modal</a></li>
+    <li (click)="stService.scroll('modalOutside')"><a class="normal-case"># Modal that closes outside</a></li>
+  </ul>
 </div>
 
 <ng-template #modal>

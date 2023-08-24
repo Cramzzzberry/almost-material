@@ -1,35 +1,50 @@
-<div class="card px-24 py-32 mb-4">
-  <h1 class="font-bold">Divider</h1>
-  <h4>Separates different elements in a group</h4>
-</div>
+<div class="flex flex-row">
+  <!-- main content -->
+  <div class="flex-1 max-w-[calc(100%-26rem)] pl-4 py-4">
+    <div class="card px-24 py-32 mb-4">
+      <h1 class="font-bold">Divider</h1>
+      <h4>Separates different elements in a group</h4>
+    </div>
+    
+    <div class="flex flex-col gap-2">
+      <app-tabs
+        [id]="'divider'"
+        [putCard]="'yes'"
+        [variantName]="'Divider'"
+        [preview]="divider"
+        [htmlCode]="snippets['divider'].htmlCode"
+        [jsxCode]="snippets['divider'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'horizontalDivider'"
+        [putCard]="'yes'"
+        [variantName]="'Horizontal Divider'"
+        [preview]="dividerHorizontal"
+        [htmlCode]="snippets['divider horizontal'].htmlCode"
+        [jsxCode]="snippets['divider horizontal'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'dividerWithColors'"
+        [putCard]="'yes'"
+        [variantName]="'Divider in different colors'"
+        [preview]="dividerWithColors"
+        [htmlCode]="snippets['divider in different colors'].htmlCode"
+        [jsxCode]="snippets['divider in different colors'].jsxCode" >
+      </app-tabs>
+    </div>
+  </div>
 
-<div class="flex flex-col gap-2">
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Divider'"
-    [preview]="divider"
-    [htmlCode]="snippets['divider'].htmlCode"
-    [jsxCode]="snippets['divider'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Horizontal Divider'"
-    [preview]="dividerHorizontal"
-    [htmlCode]="snippets['divider horizontal'].htmlCode"
-    [jsxCode]="snippets['divider horizontal'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Divider in different colors'"
-    [preview]="dividerWithColors"
-    [htmlCode]="snippets['divider in different colors'].htmlCode"
-    [jsxCode]="snippets['divider in different colors'].jsxCode" >
-  </app-tabs>
+  <!-- side content -->
+  <ul class="basis-[26rem] h-[calc(100vh-4.25rem)] sticky top-[calc(4.25rem)] menu overflow-y-auto">
+    <li (click)="stService.scroll('divider')"><a class="normal-case"># Divider</a></li>
+    <li (click)="stService.scroll('horizontalDivider')"><a class="normal-case"># Horizontal Divider</a></li>
+    <li (click)="stService.scroll('dividerWithColors')"><a class="normal-case"># Divider in different colors</a></li>
+  </ul>
 </div>
 
 <ng-template #divider>
   <div class="flex flex-col w-full">
-    <div class="flex justify-center items-center h-[6rem] bg-primary">Content 1</div>
+    <div class="flex justify-center items-center h-[6rem] bg-tertiary">Content 1</div>
     <div class="divider"></div>
     <div class="flex justify-center items-center h-[6rem] bg-secondary">Content 2</div>
   </div>
@@ -37,7 +52,7 @@
 
 <ng-template #dividerHorizontal>
   <div class="flex flex-row basis-full">
-    <div class="flex justify-center items-center h-[6rem] w-full bg-primary">Content 1</div>
+    <div class="flex justify-center items-center h-[6rem] w-full bg-tertiary">Content 1</div>
     <div class="divider divider-horizontal"></div>
     <div class="flex justify-center items-center h-[6rem] w-full bg-secondary">Content 2</div>
   </div>

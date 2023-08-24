@@ -1,44 +1,63 @@
-<div class="card px-24 py-32 mb-4">
-  <h1 class="font-bold">Card</h1>
-  <h4>Used to contain a group of elements</h4>
-</div>
+<div class="flex flex-row">
+  <!-- main content -->
+  <div class="flex-1 max-w-[calc(100%-26rem)] pl-4 py-4">
+    <div class="card px-24 py-32 mb-4">
+      <h1 class="font-bold">Card</h1>
+      <h4>Used to contain a group of elements</h4>
+    </div>
+    
+    <div class="flex flex-col gap-2 min-w-full">
+      <app-tabs
+        [id]="'typicalCard'"
+        [putCard]="'no'"
+        [variantName]="'Typical Card'"
+        [preview]="typicalCard"
+        [htmlCode]="snippets['typical card'].htmlCode"
+        [jsxCode]="snippets['typical card'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'typicalHorizontalCard'"
+        [putCard]="'no'"
+        [variantName]="'Typical horizontal Card'"
+        [preview]="typicalHorizontalCard"
+        [htmlCode]="snippets['typical horizontal card'].htmlCode"
+        [jsxCode]="snippets['typical horizontal card'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'outlinedCard'"
+        [putCard]="'no'"
+        [variantName]="'Outlined Card'"
+        [preview]="outlinedCard"
+        [htmlCode]="snippets['outlined card'].htmlCode"
+        [jsxCode]="snippets['outlined card'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'cardForModal'"
+        [putCard]="'no'"
+        [variantName]="'Card used for dialogs/modals'"
+        [preview]="modalCard"
+        [htmlCode]="snippets['modal card'].htmlCode"
+        [jsxCode]="snippets['modal card'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'cardInMenu'"
+        [putCard]="'no'"
+        [variantName]="'Card with Menu Component'"
+        [preview]="cardWithMenu"
+        [htmlCode]="snippets['card with menu'].htmlCode"
+        [jsxCode]="snippets['card with menu'].jsxCode" >
+      </app-tabs>
+    </div>
+  </div>
 
-<div class="flex flex-col gap-2">
-  <app-tabs
-    [putCard]="'no'"
-    [variantName]="'Typical Card'"
-    [preview]="typicalCard"
-    [htmlCode]="snippets['typical card'].htmlCode"
-    [jsxCode]="snippets['typical card'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'no'"
-    [variantName]="'Typical horizontal Card'"
-    [preview]="typicalHorizontalCard"
-    [htmlCode]="snippets['typical horizontal card'].htmlCode"
-    [jsxCode]="snippets['typical horizontal card'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'no'"
-    [variantName]="'Outlined Card'"
-    [preview]="outlinedCard"
-    [htmlCode]="snippets['outlined card'].htmlCode"
-    [jsxCode]="snippets['outlined card'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'no'"
-    [variantName]="'Card used for dialogs/modals'"
-    [preview]="modalCard"
-    [htmlCode]="snippets['modal card'].htmlCode"
-    [jsxCode]="snippets['modal card'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'no'"
-    [variantName]="'Card with Menu Component'"
-    [preview]="cardWithMenu"
-    [htmlCode]="snippets['card with menu'].htmlCode"
-    [jsxCode]="snippets['card with menu'].jsxCode" >
-  </app-tabs>
+  <!-- side content -->
+  <ul class="basis-[26rem] h-[calc(100vh-4.25rem)] sticky top-[calc(4.25rem)] menu overflow-y-auto">
+    <li (click)="stService.scroll('typicalCard')"><a class="normal-case"># Typical Card</a></li>
+    <li (click)="stService.scroll('typicalHorizontalCard')"><a class="normal-case"># Typical horizontal Card</a></li>
+    <li (click)="stService.scroll('outlinedCard')"><a class="normal-case"># Outlined Card</a></li>
+    <li (click)="stService.scroll('cardForModal')"><a class="normal-case"># Card used for dialogs/modals</a></li>
+    <li (click)="stService.scroll('cardInMenu')"><a class="normal-case"># Card with Menu Component</a></li>
+  </ul>
 </div>
 
 <ng-template #typicalCard>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollToService } from '../../../services/scroll-to.service'
 
 @Component({
   selector: 'app-divider',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./divider.component.css']
 })
 export class DividerComponent {
+    constructor(private scrollToService: ScrollToService) {}
+    stService = this.scrollToService;
+  
   snippets = {
     'divider': {
       htmlCode: '<div class=\"flex flex-col w-full\">\n  <div class=\"flex justify-center items-center h-[6rem] bg-primary\">Content 1</div>\n  <div class=\"divider\"></div>\n  <div class=\"flex justify-center items-center h-[6rem] bg-secondary\">Content 2</div>\n</div>',

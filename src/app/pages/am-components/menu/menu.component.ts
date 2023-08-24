@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollToService } from '../../../services/scroll-to.service'
 
 @Component({
   selector: 'app-menu',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
+  constructor(private scrollToService: ScrollToService) {}
+  stService = this.scrollToService;
+
   snippets = {
     'menu': {
       htmlCode: '<div class=\"card w-56\">\n  <ul class=\"menu\">\n    <li><a>Link 1</a></li>\n    <li><a>Link 2</a></li>\n    <li><a>Link 3</a></li>\n  </ul>\n</div>',

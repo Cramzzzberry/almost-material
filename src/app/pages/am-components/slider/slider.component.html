@@ -1,23 +1,36 @@
-<div class="card px-24 py-32 mb-4">
-  <h1 class="font-bold">Slider</h1>
-  <h4>Lets the user choose from a range of values</h4>
-</div>
+<div class="flex flex-row">
+  <!-- main content -->
+  <div class="flex-1 max-w-[calc(100%-26rem)] pl-4 py-4">
+    <div class="card px-24 py-32 mb-4">
+      <h1 class="font-bold">Slider</h1>
+      <h4>Lets the user choose from a range of values</h4>
+    </div>
+    
+    <div class="flex flex-col gap-2">
+      <app-tabs
+        [id]="'slider'"
+        [putCard]="'yes'"
+        [variantName]="'Slider'"
+        [preview]="slider"
+        [htmlCode]="snippets['slider'].htmlCode"
+        [jsxCode]="snippets['slider'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'sliderWithColors'"
+        [putCard]="'yes'"
+        [variantName]="'Slider with colors'"
+        [preview]="sliderWithColors"
+        [htmlCode]="snippets['slider with colors'].htmlCode"
+        [jsxCode]="snippets['slider with colors'].jsxCode" >
+      </app-tabs>
+    </div>
+  </div>
 
-<div class="flex flex-col gap-2">
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Slider'"
-    [preview]="slider"
-    [htmlCode]="snippets['slider'].htmlCode"
-    [jsxCode]="snippets['slider'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Slider with colors'"
-    [preview]="sliderWithColors"
-    [htmlCode]="snippets['slider with colors'].htmlCode"
-    [jsxCode]="snippets['slider with colors'].jsxCode" >
-  </app-tabs>
+  <!-- side content -->
+  <ul class="basis-[26rem] h-[calc(100vh-4.25rem)] sticky top-[calc(4.25rem)] menu overflow-y-auto">
+    <li (click)="stService.scroll('slider')"><a class="normal-case"># Slider</a></li>
+    <li (click)="stService.scroll('sliderWithColors')"><a class="normal-case"># Slider with colors</a></li>
+  </ul>
 </div>
 
 <ng-template #slider>

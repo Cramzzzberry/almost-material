@@ -1,44 +1,63 @@
-<div class="card px-24 py-32 mb-4">
-  <h1 class="font-bold">Switch</h1>
-  <h4>A toggle used for on and off purposes</h4>
-</div>
+<div class="flex flex-row">
+  <!-- main content -->
+  <div class="flex-1 max-w-[calc(100%-26rem)] pl-4 py-4">
+    <div class="card px-24 py-32 mb-4">
+      <h1 class="font-bold">Switch</h1>
+      <h4>A toggle used for on and off purposes</h4>
+    </div>
+    
+    <div class="flex flex-col gap-2">
+      <app-tabs
+        [id]="'switch'"
+        [putCard]="'yes'"
+        [variantName]="'Switch'"
+        [preview]="switch"
+        [htmlCode]="snippets['switch'].htmlCode"
+        [jsxCode]="snippets['switch'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'switchWithColors'"
+        [putCard]="'yes'"
+        [variantName]="'Switch with colors'"
+        [preview]="switchWithColors"
+        [htmlCode]="snippets['switch with colors'].htmlCode"
+        [jsxCode]="snippets['switch with colors'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'switchSizes'"
+        [putCard]="'yes'"
+        [variantName]="'Switch in different sizes'"
+        [preview]="switchSizes"
+        [htmlCode]="snippets['switch in different sizes'].htmlCode"
+        [jsxCode]="snippets['switch in different sizes'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'disabledSwitch'"
+        [putCard]="'yes'"
+        [variantName]="'Disabled Switch'"
+        [preview]="disabledSwitch"
+        [htmlCode]="snippets['disabled switch'].htmlCode"
+        [jsxCode]="snippets['disabled switch'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'indeterminateSwitch'"
+        [putCard]="'yes'"
+        [variantName]="'Indeterminate Switch'"
+        [preview]="IndeterminateSwitch"
+        [htmlCode]="snippets['indeterminate switch'].htmlCode"
+        [jsxCode]="snippets['indeterminate switch'].jsxCode" >
+      </app-tabs>
+    </div>
+  </div>
 
-<div class="flex flex-col gap-2">
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Switch'"
-    [preview]="switch"
-    [htmlCode]="snippets['switch'].htmlCode"
-    [jsxCode]="snippets['switch'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Switch with colors'"
-    [preview]="switchWithColors"
-    [htmlCode]="snippets['switch with colors'].htmlCode"
-    [jsxCode]="snippets['switch with colors'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Switch in different sizes'"
-    [preview]="switchSizes"
-    [htmlCode]="snippets['switch in different sizes'].htmlCode"
-    [jsxCode]="snippets['switch in different sizes'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Disabled Switch'"
-    [preview]="disabledSwitch"
-    [htmlCode]="snippets['disabled switch'].htmlCode"
-    [jsxCode]="snippets['disabled switch'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Indeterminate Switch'"
-    [preview]="IndeterminateSwitch"
-    [htmlCode]="snippets['indeterminate switch'].htmlCode"
-    [jsxCode]="snippets['indeterminate switch'].jsxCode" >
-  </app-tabs>
+  <!-- side content -->
+  <ul class="basis-[26rem] h-[calc(100vh-4.25rem)] sticky top-[calc(4.25rem)] menu overflow-y-auto">
+    <li (click)="stService.scroll('switch')"><a class="normal-case"># Switch</a></li>
+    <li (click)="stService.scroll('switchWithColors')"><a class="normal-case"># Switch with colors</a></li>
+    <li (click)="stService.scroll('switchSizes')"><a class="normal-case"># Switch in different sizes</a></li>
+    <li (click)="stService.scroll('disabledSwitch')"><a class="normal-case"># Disabled Switch</a></li>
+    <li (click)="stService.scroll('indeterminateSwitch')"><a class="normal-case"># Indeterminate Switch</a></li>
+  </ul>
 </div>
 
 <ng-template #switch>

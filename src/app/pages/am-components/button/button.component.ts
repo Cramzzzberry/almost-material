@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollToService } from '../../../services/scroll-to.service'
 
 @Component({
   selector: 'app-button',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./button.component.css']
 })
 export class ButtonComponent {
+  constructor(private scrollToService: ScrollToService) {}
+  stService = this.scrollToService;
+
   snippets = {
     'button': {
       htmlCode: '<button class=\"btn\">button</button>',

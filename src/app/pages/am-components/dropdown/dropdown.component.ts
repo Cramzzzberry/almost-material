@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollToService } from '../../../services/scroll-to.service'
 
 @Component({
   selector: 'app-dropdown',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./dropdown.component.css']
 })
 export class DropdownComponent {
+  constructor(private scrollToService: ScrollToService) {}
+  stService = this.scrollToService;
+
   snippets = {
     'dropdown': {
       htmlCode: '<div class=\"dropdown\">\n  <button tabIndex=\"0\" class=\"btn\">Dropdown</button>\n  <div tabIndex=\"0\" class=\"dropdown-content z-[1] card\">\n    <ul class=\"menu w-56\">\n      <li><a>Link 1</a></li>\n      <li><a>Link 2</a></li>\n      <li><a>Link 3</a></li>\n    </ul>\n  </div>\n</div>',

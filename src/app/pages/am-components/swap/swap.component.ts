@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollToService } from '../../../services/scroll-to.service'
 
 @Component({
   selector: 'app-swap',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./swap.component.css']
 })
 export class SwapComponent {
+  constructor(private scrollToService: ScrollToService) {}
+  stService = this.scrollToService;
+
   snippets = {
     'swap': {
       htmlCode: '<label class=\"swap\">\n  <input type=\"checkbox\" />\n  <span class=\"swap-off\">Click me</span>\n  <span class=\"swap-on\">Why</span>\n</label>',

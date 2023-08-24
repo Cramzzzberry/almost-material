@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollToService } from '../../../services/scroll-to.service'
 
 @Component({
   selector: 'app-navigation-rail',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./navigation-rail.component.css']
 })
 export class NavigationRailComponent {
+  constructor(private scrollToService: ScrollToService) {}
+  stService = this.scrollToService;
+
   snippets = {
     'rail': {
       htmlCode: '<div class=\"rail\">\n  <div class=\"rail-middle\">\n    <ul class=\"menu\">\n      <li>\n        <a class=\"menu-active\">\n          <span class=\"material-icons-round\">hexagon</span>\n        </a>\n      </li>\n      <li>\n        <a>\n          <span class=\"material-icons-round\">hexagon</span>\n        </a>\n      </li>\n      <li>\n        <a>\n          <span class=\"material-icons-round\">hexagon</span>\n        </a>\n      </li>\n      <li>\n        <a>\n          <span class=\"material-icons-round\">hexagon</span>\n        </a>\n      </li>\n    </ul>\n  </div>\n</div>',

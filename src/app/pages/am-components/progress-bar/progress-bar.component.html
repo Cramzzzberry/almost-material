@@ -1,30 +1,45 @@
-<div class="card px-24 py-32 mb-4">
-  <h1 class="font-bold">Progress Bar</h1>
-  <h4>Displays a visual representation of a progress</h4>
-</div>
+<div class="flex flex-row">
+  <!-- main content -->
+  <div class="flex-1 max-w-[calc(100%-26rem)] pl-4 py-4">
+    <div class="card px-24 py-32 mb-4">
+      <h1 class="font-bold">Progress Bar</h1>
+      <h4>Displays a visual representation of a progress</h4>
+    </div>
+    
+    <div class="flex flex-col gap-2">
+      <app-tabs
+        [id]="'progress'"
+        [putCard]="'yes'"
+        [variantName]="'Progress Bar'"
+        [preview]="progressBar"
+        [htmlCode]="snippets['progress bar'].htmlCode"
+        [jsxCode]="snippets['progress bar'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'progressWithColors'"
+        [putCard]="'yes'"
+        [variantName]="'Progress Bar in different colors'"
+        [preview]="progressBarWithColors"
+        [htmlCode]="snippets['progress bar in different colors'].htmlCode"
+        [jsxCode]="snippets['progress bar in different colors'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'progressSizes'"
+        [putCard]="'yes'"
+        [variantName]="'Progress Bar in different sizes'"
+        [preview]="progressBarSizes"
+        [htmlCode]="snippets['progress bar in different sizes'].htmlCode"
+        [jsxCode]="snippets['progress bar in different sizes'].jsxCode" >
+      </app-tabs>
+    </div>
+  </div>
 
-<div class="flex flex-col gap-2">
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Progress Bar'"
-    [preview]="progressBar"
-    [htmlCode]="snippets['progress bar'].htmlCode"
-    [jsxCode]="snippets['progress bar'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Progress Bar in different colors'"
-    [preview]="progressBarWithColors"
-    [htmlCode]="snippets['progress bar in different colors'].htmlCode"
-    [jsxCode]="snippets['progress bar in different colors'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Progress Bar in different sizes'"
-    [preview]="progressBarSizes"
-    [htmlCode]="snippets['progress bar in different sizes'].htmlCode"
-    [jsxCode]="snippets['progress bar in different sizes'].jsxCode" >
-  </app-tabs>
+  <!-- side content -->
+  <ul class="basis-[26rem] h-[calc(100vh-4.25rem)] sticky top-[calc(4.25rem)] menu overflow-y-auto">
+    <li (click)="stService.scroll('progress')"><a class="normal-case"># Progress Bar</a></li>
+    <li (click)="stService.scroll('progressWithColors')"><a class="normal-case"># Progress Bar in different colors</a></li>
+    <li (click)="stService.scroll('progressSizes')"><a class="normal-case"># Progress Bar in different sizes</a></li>
+  </ul>
 </div>
 
 <ng-template #progressBar>

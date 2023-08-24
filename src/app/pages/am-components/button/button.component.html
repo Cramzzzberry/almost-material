@@ -1,72 +1,99 @@
-<div class="card px-24 py-32 mb-4">
-  <h1 class="font-bold">Button</h1>
-  <h4>It allows the user to take actions</h4>
-</div>
+<div class="flex flex-row">
+  <!-- main content -->
+  <div class="flex-1 max-w-[calc(100%-26rem)] pl-4 py-4">
+    <div class="card px-24 py-32 mb-4">
+      <h1 class="font-bold">Button</h1>
+      <h4>It allows the user to take actions</h4>
+    </div>
+    
+    <div class="flex flex-col gap-2">
+      <app-tabs
+        [id]="'button'"
+        [putCard]="'yes'"
+        [variantName]="'Button'"
+        [preview]="button"
+        [htmlCode]="snippets['button'].htmlCode"
+        [jsxCode]="snippets['button'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'buttonWithIcon'"
+        [putCard]="'yes'"
+        [variantName]="'Button with icon'"
+        [preview]="buttonIcon"
+        [htmlCode]="snippets['button with icon'].htmlCode"
+        [jsxCode]="snippets['button with icon'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'outlinedButton'"
+        [putCard]="'yes'"
+        [variantName]="'Outlined Button'"
+        [preview]="outlinedButton"
+        [htmlCode]="snippets['outlined button'].htmlCode"
+        [jsxCode]="snippets['outlined button'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'ghostButton'"
+        [putCard]="'yes'"
+        [variantName]="'Ghost Button'"
+        [preview]="ghostButton"
+        [htmlCode]="snippets['ghost button'].htmlCode"
+        [jsxCode]="snippets['ghost button'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'circleButton'"
+        [putCard]="'yes'"
+        [variantName]="'Circle Button'"
+        [preview]="circleButton"
+        [htmlCode]="snippets['circle button'].htmlCode"
+        [jsxCode]="snippets['circle button'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'buttonWithColors'"
+        [putCard]="'yes'"
+        [variantName]="'Button with colors'"
+        [preview]="buttonWithColors"
+        [htmlCode]="snippets['button with colors'].htmlCode"
+        [jsxCode]="snippets['button with colors'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'buttonSizes'"
+        [putCard]="'yes'"
+        [variantName]="'Different Button sizes'"
+        [preview]="buttonSizes"
+        [htmlCode]="snippets['different button sizes'].htmlCode"
+        [jsxCode]="snippets['different button sizes'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'activeButton'"
+        [putCard]="'yes'"
+        [variantName]="'Active Button'"
+        [preview]="activeButton"
+        [htmlCode]="snippets['active buttons'].htmlCode"
+        [jsxCode]="snippets['active buttons'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'disabledButton'"
+        [putCard]="'yes'"
+        [variantName]="'Disabled Button'"
+        [preview]="disabledButton"
+        [htmlCode]="snippets['disabled button'].htmlCode"
+        [jsxCode]="snippets['disabled button'].jsxCode" >
+      </app-tabs>
+    </div>
+  </div>
 
-<div class="flex flex-col gap-2">
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Button'"
-    [preview]="button"
-    [htmlCode]="snippets['button'].htmlCode"
-    [jsxCode]="snippets['button'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Button with icon'"
-    [preview]="buttonIcon"
-    [htmlCode]="snippets['button with icon'].htmlCode"
-    [jsxCode]="snippets['button with icon'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Outlined Button'"
-    [preview]="outlinedButton"
-    [htmlCode]="snippets['outlined button'].htmlCode"
-    [jsxCode]="snippets['outlined button'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Ghost Button'"
-    [preview]="ghostButton"
-    [htmlCode]="snippets['ghost button'].htmlCode"
-    [jsxCode]="snippets['ghost button'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Circle Button'"
-    [preview]="circleButton"
-    [htmlCode]="snippets['circle button'].htmlCode"
-    [jsxCode]="snippets['circle button'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Button with colors'"
-    [preview]="buttonWithColors"
-    [htmlCode]="snippets['button with colors'].htmlCode"
-    [jsxCode]="snippets['button with colors'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Different Button sizes'"
-    [preview]="buttonSizes"
-    [htmlCode]="snippets['different button sizes'].htmlCode"
-    [jsxCode]="snippets['different button sizes'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Active Button'"
-    [preview]="activeButton"
-    [htmlCode]="snippets['active buttons'].htmlCode"
-    [jsxCode]="snippets['active buttons'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Disabled Button'"
-    [preview]="disabledButton"
-    [htmlCode]="snippets['disabled button'].htmlCode"
-    [jsxCode]="snippets['disabled button'].jsxCode" >
-  </app-tabs>
+  <!-- side content -->
+  <ul class="basis-[26rem] h-[calc(100vh-4.25rem)] sticky top-[calc(4.25rem)] menu overflow-y-auto">
+    <li (click)="stService.scroll('button')"><a class="normal-case"># Button</a></li>
+    <li (click)="stService.scroll('buttonWithIcon')"><a class="normal-case"># Button with icon</a></li>
+    <li (click)="stService.scroll('outlinedButton')"><a class="normal-case"># Outlined Button</a></li>
+    <li (click)="stService.scroll('ghostButton')"><a class="normal-case"># Ghost Button</a></li>
+    <li (click)="stService.scroll('circleButton')"><a class="normal-case"># Circle Button</a></li>
+    <li (click)="stService.scroll('buttonWithColors')"><a class="normal-case"># Button with colors</a></li>
+    <li (click)="stService.scroll('buttonSizes')"><a class="normal-case"># Different Button sizes</a></li>
+    <li (click)="stService.scroll('activeButton')"><a class="normal-case"># Active Button</a></li>
+    <li (click)="stService.scroll('disabledButton')"><a class="normal-case"># Disabled Button</a></li>
+  </ul>
 </div>
 
 <ng-template #button>

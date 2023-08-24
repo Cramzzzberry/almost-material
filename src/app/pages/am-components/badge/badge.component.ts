@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollToService } from '../../../services/scroll-to.service'
 
 @Component({
   selector: 'app-badge',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./badge.component.css']
 })
 export class BadgeComponent {
+  constructor(private scrollToService: ScrollToService) {}
+  stService = this.scrollToService;
+
   snippets = {
     'badge': {
       htmlCode: '<span class=\"badge\">badge</span>',

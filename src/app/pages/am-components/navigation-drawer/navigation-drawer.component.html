@@ -1,23 +1,36 @@
-<div class="card px-24 py-32 mb-4">
-  <h1 class="font-bold">Navigation Drawer</h1>
-  <h4>Used to access different pages that slides from the side</h4>
-</div>
+<div class="flex flex-row">
+  <!-- main content -->
+  <div class="flex-1 max-w-[calc(100%-26rem)] pl-4 py-4">
+    <div class="card px-24 py-32 mb-4">
+      <h1 class="font-bold">Navigation Drawer</h1>
+      <h4>Used to access different pages that slides from the side</h4>
+    </div>
+    
+    <div class="flex flex-col gap-2">
+      <app-tabs
+        [id]="'drawer'"
+        [putCard]="'yes'"
+        [variantName]="'Drawer'"
+        [preview]="drawer"
+        [htmlCode]="snippets['drawer'].htmlCode"
+        [jsxCode]="snippets['drawer'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'openedDrawer'"
+        [putCard]="'no'"
+        [variantName]="'Opened Drawer'"
+        [preview]="drawerOpen"
+        [htmlCode]="snippets['opened drawer'].htmlCode"
+        [jsxCode]="snippets['opened drawer'].jsxCode" >
+      </app-tabs>
+    </div>
+  </div>
 
-<div class="flex flex-col gap-2">
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Drawer'"
-    [preview]="drawer"
-    [htmlCode]="snippets['drawer'].htmlCode"
-    [jsxCode]="snippets['drawer'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'no'"
-    [variantName]="'Opened Drawer'"
-    [preview]="drawerOpen"
-    [htmlCode]="snippets['opened drawer'].htmlCode"
-    [jsxCode]="snippets['opened drawer'].jsxCode" >
-  </app-tabs>
+  <!-- side content -->
+  <ul class="basis-[26rem] h-[calc(100vh-4.25rem)] sticky top-[calc(4.25rem)] menu overflow-y-auto">
+    <li (click)="stService.scroll('drawer')"><a class="normal-case"># Drawer</a></li>
+    <li (click)="stService.scroll('openedDrawer')"><a class="normal-case"># Opened Drawer</a></li>
+  </ul>
 </div>
 
 <ng-template #drawer>

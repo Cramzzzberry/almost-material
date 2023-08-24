@@ -1,37 +1,54 @@
-<div class="card px-24 py-32 mb-4">
-  <h1 class="font-bold">Image Container</h1>
-  <h4>Used for containing images. The images are centered and cropped depending on the container size</h4>
-</div>
+<div class="flex flex-row">
+  <!-- main content -->
+  <div class="flex-1 max-w-[calc(100%-26rem)] pl-4 py-4">
+    <div class="card px-24 py-32 mb-4">
+      <h1 class="font-bold">Image Container</h1>
+      <h4>Used for containing images. The images are centered and cropped depending on the container size</h4>
+    </div>
+    
+    <div class="flex flex-col gap-2">
+      <app-tabs
+        [id]="'squareImage'"
+        [putCard]="'yes'"
+        [variantName]="'A square image'"
+        [preview]="squareImage"
+        [htmlCode]="snippets['a square image'].htmlCode"
+        [jsxCode]="snippets['a square image'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'circleImage'"
+        [putCard]="'yes'"
+        [variantName]="'A circle image'"
+        [preview]="circleImage"
+        [htmlCode]="snippets['a circle image'].htmlCode"
+        [jsxCode]="snippets['a circle image'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'cardImage'"
+        [putCard]="'no'"
+        [variantName]="'An Image Container for a typical card'"
+        [preview]="imageInCard"
+        [htmlCode]="snippets['image in card'].htmlCode"
+        [jsxCode]="snippets['image in card'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'customImageDims'"
+        [putCard]="'no'"
+        [variantName]="'Custom Image Container dimensions'"
+        [preview]="customImageDimensions"
+        [htmlCode]="snippets['custom image dimentions'].htmlCode"
+        [jsxCode]="snippets['custom image dimentions'].jsxCode" >
+      </app-tabs>
+    </div>
+  </div>
 
-<div class="flex flex-col gap-2">
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'A square image'"
-    [preview]="squareImage"
-    [htmlCode]="snippets['a square image'].htmlCode"
-    [jsxCode]="snippets['a square image'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'A circle image'"
-    [preview]="circleImage"
-    [htmlCode]="snippets['a circle image'].htmlCode"
-    [jsxCode]="snippets['a circle image'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'no'"
-    [variantName]="'An Image Container for a typical card'"
-    [preview]="imageInCard"
-    [htmlCode]="snippets['image in card'].htmlCode"
-    [jsxCode]="snippets['image in card'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'no'"
-    [variantName]="'Custom Image Container dimensions'"
-    [preview]="customImageDimensions"
-    [htmlCode]="snippets['custom image dimentions'].htmlCode"
-    [jsxCode]="snippets['custom image dimentions'].jsxCode" >
-  </app-tabs>
+  <!-- side content -->
+  <ul class="basis-[26rem] h-[calc(100vh-4.25rem)] sticky top-[calc(4.25rem)] menu overflow-y-auto">
+    <li (click)="stService.scroll('squareImage')"><a class="normal-case"># A square image</a></li>
+    <li (click)="stService.scroll('circleImage')"><a class="normal-case"># A circle image</a></li>
+    <li (click)="stService.scroll('cardImage')"><a class="normal-case"># An Image Container for a typical card</a></li>
+    <li (click)="stService.scroll('customImageDims')"><a class="normal-case"># Custom Image Container dimensions</a></li>
+  </ul>
 </div>
 
 <ng-template #squareImage>

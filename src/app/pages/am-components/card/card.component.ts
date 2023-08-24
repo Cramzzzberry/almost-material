@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollToService } from '../../../services/scroll-to.service'
 
 @Component({
   selector: 'app-card',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent {
+  constructor(private scrollToService: ScrollToService) {}
+  stService = this.scrollToService;
+  
   snippets = {
     'typical card': {
       htmlCode: '<div class=\"card w-[32rem]\">\n  <!-- card thumbnail -->\n  <div class=\"image image-card\" style=\"--image-url: url(\'https://images.pexels.com/photos/841228/pexels-photo-841228.jpeg?auto=compress\&cs=tinysrgb\&w=1260\&h=750\&dpr=1\');\"></div>\n\n  <!-- card body -->\n  <div class=\"card-body layout-spaced\">\n    <h5 class=\"card-title\">Mechanical Keyboard</h5>\n    <p>Take a look at some of the clicky, thocky and weird mechanical keyboards only here on KBD!</p>\n  </div>\n\n  <!-- card actions -->\n  <div class=\"card-actions justify-end\">\n    <button class=\"btn\">shop now</button>\n  </div>\n</div>',

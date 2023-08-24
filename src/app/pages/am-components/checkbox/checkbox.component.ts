@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollToService } from '../../../services/scroll-to.service'
 
 @Component({
   selector: 'app-checkbox',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./checkbox.component.css']
 })
 export class CheckboxComponent {
+  constructor(private scrollToService: ScrollToService) {}
+  stService = this.scrollToService;
+
   snippets = {
     'checkbox': {
       htmlCode: '<input type=\"checkbox\" checked class=\"check\" />',

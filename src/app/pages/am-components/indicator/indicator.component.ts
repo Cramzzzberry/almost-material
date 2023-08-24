@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollToService } from '../../../services/scroll-to.service'
 
 @Component({
   selector: 'app-indicator',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./indicator.component.css']
 })
 export class IndicatorComponent {
+  constructor(private scrollToService: ScrollToService) {}
+  stService = this.scrollToService;
+
   snippets = {
     'indicator': {
       htmlCode: '<div class=\"indicator\">\n  <span class=\"indicator-item badge badge-error\">+999</span>\n  <button class=\"btn\">Messages</button>\n</div>',

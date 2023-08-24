@@ -3,7 +3,7 @@
   <div class="drawer-page-content">
     <!-- page content -->
     <app-navbar></app-navbar> <!-- the navbar -->
-    <div [ngClass]="{ 'p-4' : !isHomepage() }">
+    <div>
       <router-outlet (deactivate)="scrollToTop()"></router-outlet>
     </div>
   </div>

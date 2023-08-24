@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollToService } from '../../../services/scroll-to.service'
 
 @Component({
   selector: 'app-radio-button',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./radio-button.component.css']
 })
 export class RadioButtonComponent {
+  constructor(private scrollToService: ScrollToService) {}
+  stService = this.scrollToService;
+
   snippets= {
     'radio button': {
       htmlCode: '<input type=\"radio\" name=\"radio\" class=\"radio\">\n<input type=\"radio\" name=\"radio\" checked class=\"radio\">',

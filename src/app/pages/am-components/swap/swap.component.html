@@ -1,30 +1,45 @@
-<div class="card px-24 py-32 mb-4">
-  <h1 class="font-bold">Swap</h1>
-  <h4>Swaps two elements to represent states in more detail</h4>
-</div>
+<div class="flex flex-row">
+  <!-- main content -->
+  <div class="flex-1 max-w-[calc(100%-26rem)] pl-4 py-4">
+    <div class="card px-24 py-32 mb-4">
+      <h1 class="font-bold">Swap</h1>
+      <h4>Swaps two elements to represent states in more detail</h4>
+    </div>
+    
+    <div class="flex flex-col gap-2">
+      <app-tabs
+        [id]="'swap'"
+        [putCard]="'yes'"
+        [variantName]="'Swap'"
+        [preview]="swap"
+        [htmlCode]="snippets['swap'].htmlCode"
+        [jsxCode]="snippets['swap'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'swapFade'"
+        [putCard]="'yes'"
+        [variantName]="'Swap with fade effect'"
+        [preview]="swapFade"
+        [htmlCode]="snippets['swap fade'].htmlCode"
+        [jsxCode]="snippets['swap fade'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'swapRotate'"
+        [putCard]="'yes'"
+        [variantName]="'Swap with rotate effect'"
+        [preview]="swapRotate"
+        [htmlCode]="snippets['swap rotate'].htmlCode"
+        [jsxCode]="snippets['swap rotate'].jsxCode" >
+      </app-tabs>
+    </div>
+  </div>
 
-<div class="flex flex-col gap-2">
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Swap'"
-    [preview]="swap"
-    [htmlCode]="snippets['swap'].htmlCode"
-    [jsxCode]="snippets['swap'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Swap with fade effect'"
-    [preview]="swapFade"
-    [htmlCode]="snippets['swap fade'].htmlCode"
-    [jsxCode]="snippets['swap fade'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'yes'"
-    [variantName]="'Swap with rotate effect'"
-    [preview]="swapRotate"
-    [htmlCode]="snippets['swap rotate'].htmlCode"
-    [jsxCode]="snippets['swap rotate'].jsxCode" >
-  </app-tabs>
+  <!-- side content -->
+  <ul class="basis-[26rem] h-[calc(100vh-4.25rem)] sticky top-[calc(4.25rem)] menu overflow-y-auto">
+    <li (click)="stService.scroll('swap')"><a class="normal-case"># Swap</a></li>
+    <li (click)="stService.scroll('swapFade')"><a class="normal-case"># Swap with fade effect</a></li>
+    <li (click)="stService.scroll('swapRotate')"><a class="normal-case"># Swap with rotate effect</a></li>
+  </ul>
 </div>
 
 <ng-template #swap>

@@ -1,107 +1,144 @@
-<div class="card px-24 py-32 mb-4">
-  <h1 class="font-bold">Menu</h1>
-  <h4>Used to group links, navigation points, choices, and others</h4>
-</div>
+<div class="flex flex-row">
+  <!-- main content -->
+  <div class="flex-1 max-w-[calc(100%-26rem)] pl-4 py-4">
+    <div class="card px-24 py-32 mb-4">
+      <h1 class="font-bold">Menu</h1>
+      <h4>Used to group links, navigation points, choices, and others</h4>
+    </div>
+    
+    <div class="flex flex-col gap-2">
+      <app-tabs
+        [id]="'menu'"
+        [putCard]="'no'"
+        [variantName]="'Menu'"
+        [preview]="menu"
+        [htmlCode]="snippets['menu'].htmlCode"
+        [jsxCode]="snippets['menu'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'menuWithIconsAndBadge'"
+        [putCard]="'no'"
+        [variantName]="'Menu with icons and Badge'"
+        [preview]="menuWithIconsAndBadge"
+        [htmlCode]="snippets['menu with icons and badge'].htmlCode"
+        [jsxCode]="snippets['menu with icons and badge'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'menuIconsOnly'"
+        [putCard]="'no'"
+        [variantName]="'Menu with icons only'"
+        [preview]="menuWithIconsOnly"
+        [htmlCode]="snippets['menu with icons only'].htmlCode"
+        [jsxCode]="snippets['menu with icons only'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'menuWithTitle'"
+        [putCard]="'no'"
+        [variantName]="'Menu with title'"
+        [preview]="menuWithTitle"
+        [htmlCode]="snippets['menu with title'].htmlCode"
+        [jsxCode]="snippets['menu with title'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'menuWithTitleAsParent'"
+        [putCard]="'no'"
+        [variantName]="'Menu with title as parent'"
+        [preview]="menuWithTitleAsParent"
+        [htmlCode]="snippets['menu with title as parent'].htmlCode"
+        [jsxCode]="snippets['menu with title as parent'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'menuWithSubmenu'"
+        [putCard]="'no'"
+        [variantName]="'Menu with submenu'"
+        [preview]="menuWithSubmenu"
+        [htmlCode]="snippets['menu with submenu'].htmlCode"
+        [jsxCode]="snippets['menu with submenu'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'collapsibleSubmenu'"
+        [putCard]="'no'"
+        [variantName]="'Collapsible submenu'"
+        [preview]="collapsibleSubmenu"
+        [htmlCode]="snippets['collapsible submenu'].htmlCode"
+        [jsxCode]="snippets['collapsible submenu'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'horizontalMenu'"
+        [putCard]="'no'"
+        [variantName]="'Horizontal Menu'"
+        [preview]="horizontalMenu"
+        [htmlCode]="snippets['horizontal menu'].htmlCode"
+        [jsxCode]="snippets['horizontal menu'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'horizontalMenuWithIconsAndBadge'"
+        [putCard]="'no'"
+        [variantName]="'Horizonal Menu with icons and Badge'"
+        [preview]="HorizontalMenuWithIconsAndBadge"
+        [htmlCode]="snippets['horizontal menu with icons and badge'].htmlCode"
+        [jsxCode]="snippets['horizontal menu with icons and badge'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'horizontalMenuIconsOnly'"
+        [putCard]="'no'"
+        [variantName]="'Horizontal Menu with icons only'"
+        [preview]="horizontalMenuWithIconsOnly"
+        [htmlCode]="snippets['horizontal menu with icons only'].htmlCode"
+        [jsxCode]="snippets['horizontal menu with icons only'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'horizontalMenuWithSubmenu'"
+        [putCard]="'no'"
+        [variantName]="'Horizontal Menu with submenu'"
+        [preview]="horizontalMenuWithSubmenu"
+        [htmlCode]="snippets['horizontal menu with submenu'].htmlCode"
+        [jsxCode]="snippets['horizontal menu with submenu'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'horizontalCollapsibleSubMenu'"
+        [putCard]="'no'"
+        [variantName]="'Horizontal collapsible submenu'"
+        [preview]="horizontalCollapsibleSubmenu"
+        [htmlCode]="snippets['horizontal collapsible submenu'].htmlCode"
+        [jsxCode]="snippets['horizontal collapsible submenu'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'menuWithColors'"
+        [putCard]="'no'"
+        [variantName]="'Menu with colors and active state'"
+        [preview]="menuWithColorsAndActiveState"
+        [htmlCode]="snippets['menu with colors and active state'].htmlCode"
+        [jsxCode]="snippets['menu with colors and active state'].jsxCode" >
+      </app-tabs>
+      <app-tabs
+        [id]="'menuSizes'"
+        [putCard]="'no'"
+        [variantName]="'Menu with different sizes'"
+        [preview]="menuWithDifferentSizes"
+        [htmlCode]="snippets['menu with different sizes'].htmlCode"
+        [jsxCode]="snippets['menu with different sizes'].jsxCode" >
+      </app-tabs>
+    </div>
+  </div>
 
-<div class="flex flex-col gap-2">
-  <app-tabs
-    [putCard]="'no'"
-    [variantName]="'Menu'"
-    [preview]="menu"
-    [htmlCode]="snippets['menu'].htmlCode"
-    [jsxCode]="snippets['menu'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'no'"
-    [variantName]="'Menu with icons and Badge'"
-    [preview]="menuWithIconsAndBadge"
-    [htmlCode]="snippets['menu with icons and badge'].htmlCode"
-    [jsxCode]="snippets['menu with icons and badge'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'no'"
-    [variantName]="'Menu with icons only'"
-    [preview]="menuWithIconsOnly"
-    [htmlCode]="snippets['menu with icons only'].htmlCode"
-    [jsxCode]="snippets['menu with icons only'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'no'"
-    [variantName]="'Menu with title'"
-    [preview]="menuWithTitle"
-    [htmlCode]="snippets['menu with title'].htmlCode"
-    [jsxCode]="snippets['menu with title'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'no'"
-    [variantName]="'Menu with title as parent'"
-    [preview]="menuWithTitleAsParent"
-    [htmlCode]="snippets['menu with title as parent'].htmlCode"
-    [jsxCode]="snippets['menu with title as parent'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'no'"
-    [variantName]="'Menu with submenu'"
-    [preview]="menuWithSubmenu"
-    [htmlCode]="snippets['menu with submenu'].htmlCode"
-    [jsxCode]="snippets['menu with submenu'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'no'"
-    [variantName]="'Collapsible submenu'"
-    [preview]="collapsibleSubmenu"
-    [htmlCode]="snippets['collapsible submenu'].htmlCode"
-    [jsxCode]="snippets['collapsible submenu'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'no'"
-    [variantName]="'Horizontal Menu'"
-    [preview]="horizontalMenu"
-    [htmlCode]="snippets['horizontal menu'].htmlCode"
-    [jsxCode]="snippets['horizontal menu'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'no'"
-    [variantName]="'Horizonal Menu with icons and Badge'"
-    [preview]="HorizontalMenuWithIconsAndBadge"
-    [htmlCode]="snippets['horizontal menu with icons and badge'].htmlCode"
-    [jsxCode]="snippets['horizontal menu with icons and badge'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'no'"
-    [variantName]="'Horizontal Menu with icons only'"
-    [preview]="horizontalMenuWithIconsOnly"
-    [htmlCode]="snippets['horizontal menu with icons only'].htmlCode"
-    [jsxCode]="snippets['horizontal menu with icons only'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'no'"
-    [variantName]="'Horizontal Menu with submenu'"
-    [preview]="horizontalMenuWithSubmenu"
-    [htmlCode]="snippets['horizontal menu with submenu'].htmlCode"
-    [jsxCode]="snippets['horizontal menu with submenu'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'no'"
-    [variantName]="'Horizontal collapsible submenu'"
-    [preview]="horizontalCollapsibleSubmenu"
-    [htmlCode]="snippets['horizontal collapsible submenu'].htmlCode"
-    [jsxCode]="snippets['horizontal collapsible submenu'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'no'"
-    [variantName]="'Menu with colors and active state'"
-    [preview]="menuWithColorsAndActiveState"
-    [htmlCode]="snippets['menu with colors and active state'].htmlCode"
-    [jsxCode]="snippets['menu with colors and active state'].jsxCode" >
-  </app-tabs>
-  <app-tabs
-    [putCard]="'no'"
-    [variantName]="'Menu with different sizes'"
-    [preview]="menuWithDifferentSizes"
-    [htmlCode]="snippets['menu with different sizes'].htmlCode"
-    [jsxCode]="snippets['menu with different sizes'].jsxCode" >
-  </app-tabs>
+  <!-- side content -->
+  <ul class="basis-[26rem] h-[calc(100vh-4.25rem)] sticky top-[calc(4.25rem)] menu overflow-y-auto">
+    <li (click)="stService.scroll('menu')"><a class="normal-case"># Menu</a></li>
+    <li (click)="stService.scroll('menuWithIconsAndBadge')"><a class="normal-case"># Menu with icons and Badge</a></li>
+    <li (click)="stService.scroll('menuIconsOnly')"><a class="normal-case"># Menu with icons only</a></li>
+    <li (click)="stService.scroll('menuWithTitle')"><a class="normal-case"># Menu with title</a></li>
+    <li (click)="stService.scroll('menuWithTitleAsParent')"><a class="normal-case"># Menu with title as parent</a></li>
+    <li (click)="stService.scroll('menuWithSubmenu')"><a class="normal-case"># Menu with submenu</a></li>
+    <li (click)="stService.scroll('collapsibleSubmenu')"><a class="normal-case"># Collapsible submenu</a></li>
+    <li (click)="stService.scroll('horizontalMenu')"><a class="normal-case"># Horizontal Menu</a></li>
+    <li (click)="stService.scroll('horizontalMenuWithIconsAndBadge')"><a class="normal-case"># Horizonal Menu with icons and Badge</a></li>
+    <li (click)="stService.scroll('horizontalMenuIconsOnly')"><a class="normal-case"># Horizontal Menu with icons only</a></li>
+    <li (click)="stService.scroll('horizontalMenuWithSubmenu')"><a class="normal-case"># Horizontal Menu with submenu</a></li>
+    <li (click)="stService.scroll('horizontalCollapsibleSubMenu')"><a class="normal-case"># Horizontal collapsible submenu</a></li>
+    <li (click)="stService.scroll('menuWithColors')"><a class="normal-case"># Menu with colors and active state</a></li>
+    <li (click)="stService.scroll('menuSizes')"><a class="normal-case"># Menu with different sizes</a></li>
+  </ul>
 </div>
 
 <ng-template #menu>

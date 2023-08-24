@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollToService } from '../../../services/scroll-to.service'
 
 @Component({
   selector: 'app-input-fields',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./input-fields.component.css']
 })
 export class InputFieldsComponent {
+  constructor(private scrollToService: ScrollToService) {}
+  stService = this.scrollToService;
+
   snippets = {
     'text fields': {
       htmlCode: '<div class=\"input input-text\">\n  <input placeholder=\" \" type=\"text\">\n  <label class=\"input-placeholder\">Text</label>\n</div>\n<div class=\"input input-text\">\n  <input placeholder=\" \" type=\"number\">\n  <label class=\"input-placeholder\">Number</label>\n</div>\n<div class=\"input input-text\">\n  <input placeholder=\" \" type=\"password\">\n  <label class=\"input-placeholder\">Password</label>\n</div>',

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollToService } from '../../../services/scroll-to.service'
 
 @Component({
   selector: 'app-navigation-bar',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./navigation-bar.component.css']
 })
 export class NavigationBarComponent {
+  constructor(private scrollToService: ScrollToService) {}
+  stService = this.scrollToService;
+
   snippets = {
     'navigation bar': {
       htmlCode: '<div class=\"navbar\"> \n  <div class=\"navbar-start\">\n    <ul class=\"menu menu-horizontal\">\n      <li><a>News</a></li>\n      <li><a>Blogs</a></li>\n      <li><a>Contact Me</a></li>\n    </ul>\n  </div>\n\n  <div class=\"navbar-end\">\n    <ul class=\"menu menu-horizontal\">\n      <li><a>Almost Material</a></li>\n    </ul>\n  </div>\n</div>',

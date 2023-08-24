@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+//services
+import { ScrollToService } from './services/scroll-to.service';
+
 //component blocks
 import { TabsComponent } from './component-blocks/tabs/tabs.component';
 import { NavbarComponent } from './component-blocks/navbar/navbar.component';
@@ -67,7 +70,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AppRoutingModule,
     FontAwesomeModule,
   ],
-  providers: [],
+  providers: [ScrollToService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
