@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router'
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-navbar',
@@ -8,6 +9,8 @@ import { Router } from '@angular/router'
 })
 export class NavbarComponent {
   constructor(private router: Router) {}
+
+  faGithub = faGithub;
 
   isHomepage() {
     return this.router.url === '/' || this.router.url === '/home';

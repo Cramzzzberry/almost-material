@@ -32,6 +32,7 @@ import { BadgeComponent } from './pages/am-components/badge/badge.component';
 import { DividerComponent } from './pages/am-components/divider/divider.component';
 import { IndicatorComponent } from './pages/am-components/indicator/indicator.component';
 import { ProgressBarComponent } from './pages/am-components/progress-bar/progress-bar.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { ProgressBarComponent } from './pages/am-components/progress-bar/progres
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
