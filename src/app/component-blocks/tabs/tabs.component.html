@@ -15,11 +15,13 @@
 <ng-template *ngIf="tabState === 0 && putCard === 'no'" [ngTemplateOutlet]="preview"></ng-template>
 
 <div *ngIf="tabState === 1" class="card relative overflow-y-hidden">
+<!-- the code snippet -->
 <pre class="!my-0">
 <code class="language-html">{{ htmlCode }}</code>
 </pre>
 
-  <button class="btn btn-circle btn-ghost btn-tertiary-50 btn-sm absolute top-[0.5rem] right-[0.5rem]" (click)="copyToClipboard(htmlCode)">
+  <!-- copy to clipboard btn -->
+  <button class="btn btn-circle btn-[#ffffff] btn-sm absolute top-[0.5rem] right-[0.5rem]" (click)="copyToClipboard(htmlCode)">
     <span class="material-icons-round">
       content_copy
     </span>
@@ -27,11 +29,13 @@
 </div>
 
 <div *ngIf="tabState === 2" class="card relative overflow-y-hidden">
+  <!-- the code snippet -->
 <pre class="!my-0">
 <code class="language-jsx">{{ jsxCode }}</code>
 </pre>
 
-  <button class="btn btn-circle btn-ghost btn-tertiary-50 btn-sm absolute top-[0.5rem] right-[0.5rem]" (click)="copyToClipboard(jsxCode)">
+  <!-- copy to clipboard btn -->
+  <button class="btn btn-circle btn-[#ffffff] btn-sm absolute top-[0.5rem] right-[0.5rem]" (click)="copyToClipboard(jsxCode)">
     <span class="material-icons-round">
       content_copy
     </span>

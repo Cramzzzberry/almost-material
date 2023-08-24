@@ -14,12 +14,8 @@ export class AppComponent {
       route: '/documentation/how-to-install',
     },
     {
-      name: 'Configuration',
-      route: '/documentation/configuration',
-    },
-    {
-      name: 'Color Shades',
-      route: '/documentation/color-shades',
+      name: 'Colors',
+      route: '/documentation/colors',
     },
   ];
 
@@ -131,5 +127,9 @@ export class AppComponent {
 
   isHomepage() {
     return this.router.url === '/' || this.router.url === '/home';
+  }
+  
+  scrollToTop() {
+    document.body.scrollTop = 0;
   }
 }

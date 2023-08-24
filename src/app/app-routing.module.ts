@@ -3,9 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 //pages
 import { HomeComponent } from './pages/home/home.component';
-import { ConfigurationComponent } from './pages/configuration/configuration.component';
-import { ColorShadesComponent } from './pages/color-shades/color-shades.component';
 import { HowToInstallComponent } from './pages/how-to-install/how-to-install.component';
+import { ColorsComponent } from './pages/colors/colors.component';
 
 //pages/components
 import { ButtonComponent } from './pages/am-components/button/button.component';
@@ -36,8 +35,7 @@ const routes: Routes = [
   { 
     path: 'documentation', children: [
       { path: 'how-to-install', component: HowToInstallComponent, title: 'Almost Material' },
-      { path: 'configuration', component: ConfigurationComponent, title: 'Almost Material' },
-      { path: 'color-shades', component: ColorShadesComponent, title: 'Almost Material' },
+      { path: 'colors', component: ColorsComponent, title: 'Almost Material' },
       { path: 'button', component: ButtonComponent, title: 'Almost Material' },
       { path: 'input-fields', component: InputFieldsComponent, title: 'Almost Material' },
       { path: 'slider', component: SliderComponent, title: 'Almost Material' },
@@ -62,7 +60,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes)
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

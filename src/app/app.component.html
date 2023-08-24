@@ -4,7 +4,7 @@
     <!-- page content -->
     <app-navbar></app-navbar> <!-- the navbar -->
     <div [ngClass]="{ 'p-4' : !isHomepage() }">
-      <router-outlet></router-outlet>
+      <router-outlet (deactivate)="scrollToTop()"></router-outlet>
     </div>
   </div>
 

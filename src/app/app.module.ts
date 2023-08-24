@@ -9,9 +9,8 @@ import { NavbarComponent } from './component-blocks/navbar/navbar.component';
 
 //pages
 import { HomeComponent } from './pages/home/home.component';
-import { ConfigurationComponent } from './pages/configuration/configuration.component';
-import { ColorShadesComponent } from './pages/color-shades/color-shades.component';
 import { HowToInstallComponent } from './pages/how-to-install/how-to-install.component';
+import { ColorsComponent } from './pages/colors/colors.component';
 
 //pages/components
 import { ButtonComponent } from './pages/am-components/button/button.component';
@@ -39,9 +38,8 @@ import { ProgressBarComponent } from './pages/am-components/progress-bar/progres
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    ConfigurationComponent,
-    ColorShadesComponent,
     HowToInstallComponent,
+    ColorsComponent,
     ButtonComponent,
     InputFieldsComponent,
     SliderComponent,
