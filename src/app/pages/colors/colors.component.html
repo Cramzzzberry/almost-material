@@ -1,4 +1,4 @@
-<div class="w-2/3">
+<div class="w-3/4 p-4">
   <h2 class="font-bold">Colors in Almost Material</h2>
   <span class="divider"></span>
 
@@ -18,71 +18,67 @@
       <li class="badge badge-success">Success</li>
       <li class="badge badge-error">Error</li>
     </ul>
-  </div>
+  </div><br><br>
 
   <h3 class="font-semibold">Custom palette for Almost Material Plugin</h3>
   <span class="divider"></span>
 
-  <div class="px-4">
-    <h5 class="mb-4">You can override the default palette by making your own palette <span class="badge badge-gray-300">Object</span> and pass it to <span class="badge badge-warning normal-case">almostMaterial</span> key under theme like this:</h5>
-    <div class="card relative overflow-y-hidden mb-4">
+  <h5 class="mb-4 px-4">You can override the default palette by making your own palette <span class="badge badge-gray-300">Object</span> and pass it to <span class="badge badge-gray-300 normal-case">almostMaterial</span> key under theme like this:</h5>
+  <div class="card relative overflow-y-hidden mb-4">
 <!-- the code snippet -->
 <pre class="!my-0">
 <code class="language-js">{{ overridePaletteSnippet }}</code>
 </pre>
 
-      <!-- copy to clipboard btn -->
-      <button class="btn btn-circle btn-[#ffffff] btn-sm absolute top-[0.5rem] right-[0.5rem]" (click)="copyToClipboard(overridePaletteSnippet)">
-        <span class="material-icons-round">
-          content_copy
-        </span>
-      </button>
-    </div>
-  </div>
+    <!-- copy to clipboard btn -->
+    <button class="btn btn-circle btn-[#ffffff] btn-sm absolute top-[0.5rem] right-[0.5rem]" (click)="copyToClipboard(overridePaletteSnippet)">
+      <span class="material-icons-round">
+        content_copy
+      </span>
+    </button>
+  </div><br><br>
 
   <h3 class="font-semibold">Extend your palette to Tailwind Classes with different shades</h3>
   <span class="divider"></span>
 
-  <div class="px-4">
-    <h5 class="mb-4">Almost Material Plugin has 13 shades for each color in the palette:</h5>
-    <ul class="pl-2 my-4 flex flex-col gap-2">
-      <li class="w-[20rem] badge badge-primary-0">Primary-0</li>
-      <li class="w-[20rem] badge badge-primary-10">Primary-10</li>
-      <li class="w-[20rem] badge badge-primary-20">Primary-20</li>
-      <li class="w-[20rem] badge badge-primary-30">Primary-30</li>
-      <li class="w-[20rem] badge badge-primary-40">Primary-40 (Default Shade)</li>
-      <li class="w-[20rem] badge badge-primary-50">Primary-50</li>
-      <li class="w-[20rem] badge badge-primary-60">Primary-60</li>
-      <li class="w-[20rem] badge badge-primary-70">Primary-70</li>
-      <li class="w-[20rem] badge badge-primary-80">Primary-80</li>
-      <li class="w-[20rem] badge badge-primary-90">Primary-90</li>
-      <li class="w-[20rem] badge badge-primary-95">Primary-95</li>
-      <li class="w-[20rem] badge badge-primary-99">Primary-99</li>
-      <li class="w-[20rem] badge badge-primary-100">Primary-100</li>
-    </ul>
+  <h5 class="mb-4 px-4">Almost Material Plugin has 13 shades for each color in the palette:</h5>
+  <ul class="pl-6 my-4 flex flex-col gap-2">
+    <li class="w-[20rem] badge badge-primary-0">Primary-0</li>
+    <li class="w-[20rem] badge badge-primary-10">Primary-10</li>
+    <li class="w-[20rem] badge badge-primary-20">Primary-20</li>
+    <li class="w-[20rem] badge badge-primary-30">Primary-30</li>
+    <li class="w-[20rem] badge badge-primary-40">Primary-40 (Default Shade)</li>
+    <li class="w-[20rem] badge badge-primary-50">Primary-50</li>
+    <li class="w-[20rem] badge badge-primary-60">Primary-60</li>
+    <li class="w-[20rem] badge badge-primary-70">Primary-70</li>
+    <li class="w-[20rem] badge badge-primary-80">Primary-80</li>
+    <li class="w-[20rem] badge badge-primary-90">Primary-90</li>
+    <li class="w-[20rem] badge badge-primary-95">Primary-95</li>
+    <li class="w-[20rem] badge badge-primary-99">Primary-99</li>
+    <li class="w-[20rem] badge badge-primary-100">Primary-100</li>
+  </ul>
 
-    <h5 class="mb-4">If you want to extend the palette to Tailwind Classes, Use the function <span class="badge badge-primary normal-case">CreateShades(yourPalette)</span> to produce these shades and extend it via <span class="badge badge-gray-300 lowercase">theme</span> like this:</h5>
-    <div class="card relative overflow-y-hidden mb-4">
+  <h5 class="mb-4 px-4">If you want to extend the palette to Tailwind Classes, Use the function <span class="badge badge-gray-300 normal-case">CreateShades(yourPalette)</span> to produce these shades and extend it via <span class="badge badge-gray-300 lowercase">theme</span> like this:</h5>
+  <div class="card relative overflow-y-hidden mb-4">
 <!-- the code snippet -->
 <pre class="!my-0">
 <code class="language-js">{{ extendPaletteSnippet }}</code>
 </pre>
 
-      <!-- copy to clipboard btn -->
-      <button class="btn btn-circle btn-[#ffffff] btn-sm absolute top-[0.5rem] right-[0.5rem]" (click)="copyToClipboard(extendPaletteSnippet)">
-        <span class="material-icons-round">
-          content_copy
-        </span>
-      </button>
-    </div>
+    <!-- copy to clipboard btn -->
+    <button class="btn btn-circle btn-[#ffffff] btn-sm absolute top-[0.5rem] right-[0.5rem]" (click)="copyToClipboard(extendPaletteSnippet)">
+      <span class="material-icons-round">
+        content_copy
+      </span>
+    </button>
+  </div>
 
-    <div class="flex justify-center">
-      <a routerLink="/documentation/button" class="btn btn-warning">
-        <span class="material-icons-round">
-          library_books
-        </span>
-        see components
-      </a>
-    </div>
+  <div class="flex justify-center">
+    <a routerLink="/documentation/button" class="btn btn-warning">
+      <span class="material-icons-round">
+        library_books
+      </span>
+      see components
+    </a>
   </div>
 </div>
