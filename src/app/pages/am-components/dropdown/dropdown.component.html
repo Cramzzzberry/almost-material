@@ -1,12 +1,12 @@
 <div class="flex flex-row">
   <!-- main content -->
-  <div class="flex-1 max-w-[calc(100%-26rem)] pl-4 py-4">
-    <div class="card px-24 py-32 mb-4">
-      <h1 class="font-bold">Dropdown Menu</h1>
-      <h4>Gives users a list of contents, choices or links that floats around the button</h4>
+  <div class="flex-1 max-w-full lg:max-w-[calc(100%-26rem)] px-4 lg:pr-0 py-4">
+    <div class="card p-10 xl:px-24 lg:py-32 mb-4">
+      <span class="font-bold text-[3rem] md:text-[4.5rem] lg:text-[6rem]">Dropdown Menu</span>
+      <p class="text-[1rem] md:text-[1.25rem] lg:text-[1.5rem]">Gives users a list of contents, choices or links that floats around the button</p>
     </div>
     
-    <div class="flex flex-col gap-2">
+    <div class="flex flex-col gap-4 md:gap-2">
       <app-tabs
         [id]="'dropdown'"
         [putCard]="'no'"
@@ -83,7 +83,7 @@
   </div>
 
   <!-- side content -->
-  <ul class="basis-[26rem] h-[calc(100vh-4.25rem)] sticky top-[calc(4.25rem)] menu overflow-y-auto">
+  <ul class="hidden lg:block basis-[26rem] h-[calc(100vh-4.25rem)] sticky top-[calc(4.25rem)] menu overflow-y-auto">
     <li (click)="stService.scroll('dropdown')"><a class="normal-case"># Dropdown</a></li>
     <li (click)="stService.scroll('dropdownTop')"><a class="normal-case"># Dropdown Top</a></li>
     <li (click)="stService.scroll('dropdownTopEnd')"><a class="normal-case"># Dropdown Top aligned to end</a></li>
@@ -101,7 +101,7 @@
     <div class="dropdown">
       <button tabIndex="0" class="btn">Dropdown</button>
       <div tabIndex="0" class="dropdown-content z-[1] card">
-        <ul class="menu w-56">
+        <ul class="menu w-48">
           <li><a>Link 1</a></li>
           <li><a>Link 2</a></li>
           <li><a>Link 3</a></li>
@@ -116,7 +116,7 @@
     <div class="dropdown dropdown-top">
       <button tabIndex="0" class="btn">Dropdown</button>
       <div tabIndex="0" class="dropdown-content z-[1] card">
-        <ul class="menu w-56">
+        <ul class="menu w-48">
           <li><a>Link 1</a></li>
           <li><a>Link 2</a></li>
           <li><a>Link 3</a></li>
@@ -131,7 +131,7 @@
     <div class="dropdown dropdown-top dropdown-end">
       <button tabIndex="0" class="btn">Dropdown</button>
       <div tabIndex="0" class="dropdown-content z-[1] card">
-        <ul class="menu w-56">
+        <ul class="menu w-48">
           <li><a>Link 1</a></li>
           <li><a>Link 2</a></li>
           <li><a>Link 3</a></li>
@@ -146,7 +146,7 @@
     <div class="dropdown dropdown-bottom">
       <button tabIndex="0" class="btn">Dropdown</button>
       <div tabIndex="0" class="dropdown-content z-[1] card">
-        <ul class="menu w-56">
+        <ul class="menu w-48">
           <li><a>Link 1</a></li>
           <li><a>Link 2</a></li>
           <li><a>Link 3</a></li>
@@ -161,7 +161,7 @@
     <div class="dropdown dropdown-bottom dropdown-end">
       <button tabIndex="0" class="btn">Dropdown</button>
       <div tabIndex="0" class="dropdown-content z-[1] card">
-        <ul class="menu w-56">
+        <ul class="menu w-48">
           <li><a>Link 1</a></li>
           <li><a>Link 2</a></li>
           <li><a>Link 3</a></li>
@@ -172,11 +172,11 @@
 </ng-template>
 
 <ng-template #dropdownLeft>
-  <div class="card p-4 min-h-[20rem] flex justify-center items-center">
+  <div class="card p-4 min-h-[20rem] flex justify-end lg:justify-center items-center">
     <div class="dropdown dropdown-left">
       <button tabIndex="0" class="btn">Dropdown</button>
       <div tabIndex="0" class="dropdown-content z-[1] card">
-        <ul class="menu w-56">
+        <ul class="menu w-48">
           <li><a>Link 1</a></li>
           <li><a>Link 2</a></li>
           <li><a>Link 3</a></li>
@@ -187,11 +187,11 @@
 </ng-template>
 
 <ng-template #dropdownLeftAlignedToEnd>
-  <div class="card p-4 min-h-[20rem] flex justify-center items-center">
+  <div class="card p-4 min-h-[20rem] flex justify-end lg:justify-center items-center">
     <div class="dropdown dropdown-left dropdown-end">
       <button tabIndex="0" class="btn">Dropdown</button>
       <div tabIndex="0" class="dropdown-content z-[1] card">
-        <ul class="menu w-56">
+        <ul class="menu w-48">
           <li><a>Link 1</a></li>
           <li><a>Link 2</a></li>
           <li><a>Link 3</a></li>
@@ -202,11 +202,11 @@
 </ng-template>
 
 <ng-template #dropdownRight>
-  <div class="card p-4 min-h-[20rem] flex justify-center items-center">
+  <div class="card p-4 min-h-[20rem] flex lg:justify-center items-center">
     <div class="dropdown dropdown-right">
       <button tabIndex="0" class="btn">Dropdown</button>
       <div tabIndex="0" class="dropdown-content z-[1] card">
-        <ul class="menu w-56">
+        <ul class="menu w-48">
           <li><a>Link 1</a></li>
           <li><a>Link 2</a></li>
           <li><a>Link 3</a></li>
@@ -217,11 +217,11 @@
 </ng-template>
 
 <ng-template #dropdownRightAlignedToEnd>
-  <div class="card p-4 min-h-[20rem] flex justify-center items-center">
+  <div class="card p-4 min-h-[20rem] flex lg:justify-center items-center">
     <div class="dropdown dropdown-right dropdown-end">
       <button tabIndex="0" class="btn">Dropdown</button>
       <div tabIndex="0" class="dropdown-content z-[1] card">
-        <ul class="menu w-56">
+        <ul class="menu w-48">
           <li><a>Link 1</a></li>
           <li><a>Link 2</a></li>
           <li><a>Link 3</a></li>

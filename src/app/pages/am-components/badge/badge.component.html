@@ -1,12 +1,12 @@
 <div class="flex flex-row">
   <!-- main content -->
-  <div class="flex-1 max-w-[calc(100%-26rem)] pl-4 py-4">
-    <div class="card px-24 py-32 mb-4">
-      <h1 class="font-bold">Badge</h1>
-      <h4>Represents the status or notification of the underlying element</h4>
+  <div class="flex-1 max-w-full lg:max-w-[calc(100%-26rem)] px-4 lg:pr-0 py-4">
+    <div class="card p-10 md:px-24 md:py-32 mb-4">
+      <span class="font-bold text-[3rem] md:text-[4.5rem] lg:text-[6rem]">Badge</span>
+      <p class="text-[1rem] md:text-[1.25rem] lg:text-[1.5rem]">Represents the status or notification of the underlying element</p>
     </div>
     
-    <div class="flex flex-col gap-2">
+    <div class="flex flex-col gap-4 md:gap-2">
       <app-tabs
         [id]="'badge'"
         [putCard]="'yes'"
@@ -51,7 +51,7 @@
   </div>
 
   <!-- side content -->
-  <ul class="basis-[26rem] h-[calc(100vh-4.25rem)] sticky top-[calc(4.25rem)] menu overflow-y-auto">
+  <ul class="hidden lg:block basis-[26rem] h-[calc(100vh-4.25rem)] sticky top-[calc(4.25rem)] menu overflow-y-auto">
     <li (click)="stService.scroll('badge')"><a class="normal-case"># Badge</a></li>
     <li (click)="stService.scroll('outlinedBadge')"><a class="normal-case"># Outlined Badge</a></li>
     <li (click)="stService.scroll('badgeNoText')"><a class="normal-case"># Badge without text</a></li>

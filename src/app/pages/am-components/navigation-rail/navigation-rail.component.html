@@ -1,12 +1,12 @@
 <div class="flex flex-row">
   <!-- main content -->
-  <div class="flex-1 max-w-[calc(100%-26rem)] pl-4 py-4">
-    <div class="card px-24 py-32 mb-4">
-      <h1 class="font-bold">Navigation Rail</h1>
-      <h4>Blah</h4>
+  <div class="flex-1 max-w-full lg:max-w-[calc(100%-26rem)] px-4 lg:pr-0 py-4">
+    <div class="card p-10 xl:px-24 md:py-32 mb-4">
+      <span class="font-bold text-[2.25rem] sm:text-[3rem] md:text-[4.5rem] lg:text-[6rem]">Navigation Rail</span>
+      <p class="text-[1rem] md:text-[1.25rem] lg:text-[1.5rem]">It also provides quick access to other pages/navigation points as navbar, but on vertical layout.</p>
     </div>
     
-    <div class="flex flex-col gap-2">
+    <div class="flex flex-col gap-4 md:gap-2">
       <app-tabs
         [id]="'rail'"
         [putCard]="'no'"
@@ -27,7 +27,7 @@
   </div>
 
   <!-- side content -->
-  <ul class="basis-[26rem] h-[calc(100vh-4.25rem)] sticky top-[calc(4.25rem)] menu overflow-y-auto">
+  <ul class="hidden lg:block basis-[26rem] h-[calc(100vh-4.25rem)] sticky top-[calc(4.25rem)] menu overflow-y-auto">
     <li (click)="stService.scroll('rail')"><a class="normal-case"># Navigation Rail</a></li>
     <li (click)="stService.scroll('railWithToggle')"><a class="normal-case"># Navigation Rail with open toggle</a></li>
   </ul>
@@ -65,7 +65,7 @@
 </ng-template>
 
 <ng-template #railWithOpenToggle>
-  <div class="card p-4">
+  <div class="card p-4 overflow-x-auto">
     <input type="checkbox" id="sampleRail2" class="rail-toggle">
     <div class="rail h-[24rem]">
       <!-- rail top -->

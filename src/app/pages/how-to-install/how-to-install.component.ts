@@ -1,6 +1,7 @@
 import { Component, AfterViewChecked } from '@angular/core';
 import { HighlightService } from '../../services/highlight.service';
 import { Clipboard } from '@angular/cdk/clipboard';
+import { ScrollToService } from '../../services/scroll-to.service'
 
 @Component({
   selector: 'app-how-to-install',
@@ -8,7 +9,8 @@ import { Clipboard } from '@angular/cdk/clipboard';
   styleUrls: ['./how-to-install.component.css']
 })
 export class HowToInstallComponent implements AfterViewChecked {
-  constructor(private highlightService: HighlightService, private clipboard: Clipboard) {}
+  constructor(private highlightService: HighlightService, private clipboard: Clipboard, private scrollToService: ScrollToService) {}
+  stService = this.scrollToService;
 
   componentSnippet = '<button class=\"btn\">button</button>';
   importSnippet = 'const plugin = require(\'@cramzzzberry/almost-material-plugin\')\n\nmodule.exports = {\n  plugins: [plugin.almostMaterial],\n}';

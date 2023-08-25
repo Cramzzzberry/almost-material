@@ -1,15 +1,15 @@
 <div class="flex flex-row">
   <!-- main content -->
-  <div class="flex-1 max-w-[calc(100%-26rem)] pl-4 py-4">
-    <div class="card px-24 py-32 mb-4">
-      <h1 class="font-bold">Navigation Bar</h1>
-      <h4>Provides quick access to other pages/navigation points. It sits on top or at the bottom of the page</h4>
+  <div class="flex-1 max-w-full lg:max-w-[calc(100%-26rem)] px-4 lg:pr-0 py-4">
+    <div class="card p-10 xl:px-24 md:py-32 mb-4">
+      <span class="font-bold text-[2.25rem] sm:text-[3rem] md:text-[4.5rem] lg:text-[6rem]">Navigation Bar</span>
+      <p class="text-[1rem] md:text-[1.25rem] lg:text-[1.5rem]">Provides quick access to other pages/navigation points. It sits on top or at the bottom of the page</p>
     </div>
     
-    <div class="flex flex-col gap-2">
+    <div class="flex flex-col gap-4 md:gap-2">
       <app-tabs
         [id]="'navbar'"
-        [putCard]="'yes'"
+        [putCard]="'no'"
         [variantName]="'Navigation Bar'"
         [preview]="navbar"
         [htmlCode]="snippets['navigation bar'].htmlCode"
@@ -33,7 +33,7 @@
       </app-tabs>
       <app-tabs
         [id]="'navbarContentPositions'"
-        [putCard]="'yes'"
+        [putCard]="'no'"
         [variantName]="'Navbar Start, Center and End'"
         [preview]="navbarSections"
         [htmlCode]="snippets['navbar start, center and end'].htmlCode"
@@ -41,7 +41,7 @@
       </app-tabs>
       <app-tabs
         [id]="'bottomNav'"
-        [putCard]="'yes'"
+        [putCard]="'no'"
         [variantName]="'Bottom Navigation Bar'"
         [preview]="bottomNavbar"
         [htmlCode]="snippets['bottom navigation bar'].htmlCode"
@@ -51,7 +51,7 @@
   </div>
 
   <!-- side content -->
-  <ul class="basis-[26rem] h-[calc(100vh-4.25rem)] sticky top-[calc(4.25rem)] menu overflow-y-auto">
+  <ul class="hidden lg:block basis-[26rem] h-[calc(100vh-4.25rem)] sticky top-[calc(4.25rem)] menu overflow-y-auto">
     <li (click)="stService.scroll('navbar')"><a class="normal-case"># Navigation Bar</a></li>
     <li (click)="stService.scroll('navbarWithCollapsibleMenu')"><a class="normal-case"># Navigation Bar with collapsible Menu</a></li>
     <li (click)="stService.scroll('navbarWithDropdownMenu')"><a class="normal-case"># Navigation Bar with Dropdown Menu</a></li>
@@ -61,26 +61,28 @@
 </div>
 
 <ng-template #navbar>
-  <div class="navbar !static z-[0]"> 
-    <div class="navbar-start">
-      <ul class="menu menu-horizontal">
-        <li><a>News</a></li>
-        <li><a>Blogs</a></li>
-        <li><a>Contact Me</a></li>
-      </ul>
-    </div>
-  
-    <div class="navbar-end">
-      <ul class="menu menu-horizontal">
-        <li><a>Almost Material</a></li>
-      </ul>
+  <div class="card p-4 flex justify-start sm:justify-center items-center overflow-x-auto">
+    <div class="navbar !static z-[0] min-w-[40rem]"> 
+      <div class="navbar-start">
+        <ul class="menu menu-horizontal">
+          <li><a>News</a></li>
+          <li><a>Blogs</a></li>
+          <li><a>Contact Me</a></li>
+        </ul>
+      </div>
+    
+      <div class="navbar-end">
+        <ul class="menu menu-horizontal">
+          <li><a>Almost Material</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </ng-template>
 
 <ng-template #navbarWithCollapsibleMenu>
-  <div class="card p-4 min-h-[14rem]">
-    <div class="navbar !static z-[0]">
+  <div class="card p-4 min-h-[14rem] flex justify-start sm:justify-center overflow-x-auto">
+    <div class="navbar !static z-[0] min-w-[40rem]">
       <div class="navbar-start">
         <ul class="menu menu-horizontal">
           <li>
@@ -111,8 +113,8 @@
 </ng-template>
 
 <ng-template #navbarWithDropdownMenu>
-  <div class="card p-4 min-h-[14rem]">
-    <div class="navbar !static z-[0]">
+  <div class="card p-4 min-h-[14rem] flex justify-start sm:justify-center overflow-x-auto">
+    <div class="navbar !static z-[0] min-w-[40rem]">
       <div class="navbar-start">
         <ul class="menu menu-horizontal">
           <li><a>Meals</a></li>
@@ -146,47 +148,51 @@
 </ng-template>
 
 <ng-template #navbarSections>
-  <div class="navbar !static z-[0]">
-    <!-- navbar start -->
-    <div class="navbar-start">
-      <ul class="menu menu-horizontal">
-        <li><a>Almost Material</a></li>
-      </ul>
-    </div>
-  
-    <!-- navbar center -->
-    <div class="navbar-center">
-      <ul class="menu menu-horizontal">
-        <li><a>On Sale</a></li>
-        <li><a>Bundles</a></li>
-        <li><a>Categories</a></li>
-      </ul>
-    </div>
-  
-    <!-- navbar end -->
-    <div class="navbar-end">
-      <ul class="menu menu-horizontal">
-        <li>
-          <a class="btn">
-            <span class="material-icons-round">
-              shopping_cart
-            </span>
-            Shopping Cart
-          </a>
-        </li>
-      </ul>
+  <div class="card p-4 flex justify-start xl:justify-center items-center overflow-x-auto">
+    <div class="navbar !static z-[0] min-w-[48rem]">
+      <!-- navbar start -->
+      <div class="navbar-start">
+        <ul class="menu menu-horizontal">
+          <li><a>Almost Material</a></li>
+        </ul>
+      </div>
+    
+      <!-- navbar center -->
+      <div class="navbar-center">
+        <ul class="menu menu-horizontal">
+          <li><a>On Sale</a></li>
+          <li><a>Bundles</a></li>
+          <li><a>Categories</a></li>
+        </ul>
+      </div>
+    
+      <!-- navbar end -->
+      <div class="navbar-end">
+        <ul class="menu menu-horizontal">
+          <li>
+            <a class="btn">
+              <span class="material-icons-round">
+                shopping_cart
+              </span>
+              Shopping Cart
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </ng-template>
 
 <ng-template #bottomNavbar>
-  <div class="navbar navbar-bottom !static z-[0]">
-    <ul class="menu">
-      <li><a class="menu-active"><span class="material-icons-round">home</span>home</a></li>
-      <li><a><span class="material-icons-round">library_books</span>library</a></li>
-      <li><a><span class="material-icons-round">favorite</span>favorites</a></li>
-      <li><a><span class="material-icons-round">update</span>update</a></li>
-      <li><a><span class="material-icons-round">settings</span>settings</a></li>
-    </ul>
+  <div class="card p-4 flex justify-start lg:justify-center items-center overflow-x-auto">
+    <div class="navbar navbar-bottom !static z-[0] min-w-[30rem]">
+      <ul class="menu">
+        <li><a class="menu-active"><span class="material-icons-round">home</span>home</a></li>
+        <li><a><span class="material-icons-round">library_books</span>library</a></li>
+        <li><a><span class="material-icons-round">favorite</span>favorites</a></li>
+        <li><a><span class="material-icons-round">update</span>update</a></li>
+        <li><a><span class="material-icons-round">settings</span>settings</a></li>
+      </ul>
+    </div>
   </div>
 </ng-template>

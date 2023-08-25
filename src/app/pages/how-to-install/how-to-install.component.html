@@ -1,67 +1,74 @@
-<div class="w-3/4 p-4">
-  <h2 class="font-bold">Installation</h2>
-  <span class="divider"></span>
-
-  <div class="card card-warning mb-4 p-4 flex items-center gap-4">
-    <span class="material-icons-round">
-      warning
-    </span>
-    <p>
-      You need to have <a href="https://nodejs.org/en" target="_blank"><b><u>Node.js</u></b></a> and <a href="https://tailwindcss.com/docs/installation" target="_blank"><b><u>TailwindCSS</u></b></a> installed.
-    </p>
-  </div>
-
-  <h5 class="mb-4 px-4">1. Install Almost Material via npm.</h5>
-  <div class="card relative overflow-y-hidden mb-4">
+<div class="flex flex-row">
+  <div class="flex-1 max-w-full lg:max-w-[calc(100%-26rem)] p-4">
+    <h2 class="font-bold text-[3rem] md:text-[3.75rem]" id="installation" >Installation</h2>
+    <span class="divider"></span>
+  
+    <div class="card card-warning mb-4 p-4 flex items-center gap-4">
+      <span class="material-icons-round">
+        warning
+      </span>
+      <p>
+        You need to have <a href="https://nodejs.org/en" target="_blank"><b><u>Node.js</u></b></a> and <a href="https://tailwindcss.com/docs/installation" target="_blank"><b><u>TailwindCSS</u></b></a> installed.
+      </p>
+    </div>
+  
+    <h5 class="mb-4 px-4">1. Install Almost Material via npm.</h5>
+    <div class="card relative overflow-y-hidden mb-4">
 <!-- the code snippet -->
 <pre class="!my-0">
 <code class="language-bash">{{ cmdSnippet }}</code>
 </pre>
-
-    <!-- copy to clipboard btn -->
-    <button class="btn btn-circle btn-[#ffffff] btn-sm absolute top-[0.5rem] right-[0.5rem]" (click)="copyToClipboard(cmdSnippet)">
-      <span class="material-icons-round">
-        content_copy
-      </span>
-    </button>
-  </div>
-
-  <h5 class="mb-4 px-4">2. Import the plugin in your tailwind.config.js like this:</h5>
-  <div class="card relative overflow-y-hidden mb-4">
+  
+      <!-- copy to clipboard btn -->
+      <button class="btn btn-circle btn-[#ffffff] btn-sm absolute top-[0.5rem] right-[0.5rem]" (click)="copyToClipboard(cmdSnippet)">
+        <span class="material-icons-round">
+          content_copy
+        </span>
+      </button>
+    </div>
+  
+    <h5 class="mb-4 px-4">2. Import the plugin in your tailwind.config.js like this:</h5>
+    <div class="card relative overflow-y-hidden mb-4">
 <!-- the code snippet -->
 <pre class="!my-0">
 <code class="language-javascript">{{ importSnippet }}</code>
 </pre>
-
-    <!-- copy to clipboard btn -->
-    <button class="btn btn-circle btn-[#ffffff] btn-sm absolute top-[0.5rem] right-[0.5rem]" (click)="copyToClipboard(importSnippet)">
-      <span class="material-icons-round">
-        content_copy
-      </span>
-    </button>
-  </div>
-
-  <h5 class="mb-4 px-4">3. You can now use the built-in components like so:</h5>
-  <div class="card relative overflow-y-hidden mb-4">
+  
+      <!-- copy to clipboard btn -->
+      <button class="btn btn-circle btn-[#ffffff] btn-sm absolute top-[0.5rem] right-[0.5rem]" (click)="copyToClipboard(importSnippet)">
+        <span class="material-icons-round">
+          content_copy
+        </span>
+      </button>
+    </div>
+  
+    <h5 class="mb-4 px-4">3. You can now use the built-in components like so:</h5>
+    <div class="card relative overflow-y-hidden mb-4">
 <!-- the code snippet -->
 <pre class="!my-0">
 <code class="language-html">{{ componentSnippet }}</code>
 </pre>
-
-    <!-- copy to clipboard btn -->
-    <button class="btn btn-circle btn-[#ffffff] btn-sm absolute top-[0.5rem] right-[0.5rem]" (click)="copyToClipboard(componentSnippet)">
-      <span class="material-icons-round">
-        content_copy
-      </span>
-    </button>
+  
+      <!-- copy to clipboard btn -->
+      <button class="btn btn-circle btn-[#ffffff] btn-sm absolute top-[0.5rem] right-[0.5rem]" (click)="copyToClipboard(componentSnippet)">
+        <span class="material-icons-round">
+          content_copy
+        </span>
+      </button>
+    </div>
+  
+    <div class="flex justify-center">
+      <a routerLink="/documentation/button" class="btn btn-warning">
+        <span class="material-icons-round">
+          library_books
+        </span>
+        see components
+      </a>
+    </div>
   </div>
-
-  <div class="flex justify-center">
-    <a routerLink="/documentation/button" class="btn btn-warning">
-      <span class="material-icons-round">
-        library_books
-      </span>
-      see components
-    </a>
-  </div>
+  
+  <!-- side content -->
+  <ul class="hidden lg:block basis-[26rem] h-[calc(100vh-4.25rem)] sticky top-[calc(4.25rem)] menu overflow-y-auto">
+    <li (click)="stService.scroll('installation')"><a class="normal-case"># Installation</a></li>
+  </ul>  
 </div>

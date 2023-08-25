@@ -9,7 +9,8 @@
       </li>
       <li [ngClass]="{ 'xl:hidden' : !isHomepage() }">
         <a routerLink="/home">
-          Almost Material
+          <span class="hidden sm:inline !text-[1rem]">Almost Material</span>
+          <span class="sm:hidden !text-[1rem]">AM</span>
         </a>
       </li>
     </ul>
@@ -23,14 +24,13 @@
           <span class="material-icons-round">
             library_books
           </span>
-          Docs
-          <span class="badge badge-warning">Inc</span>
+          <span class="hidden sm:inline !text-[1rem]">Docs</span>
         </a>
       </li>
       <li>
         <a href="https://github.com/Cramzzzberry/almost-material-plugin" target="_blank" class="btn btn-outline">
           <fa-icon [icon]="faGithub"></fa-icon>
-          Github
+          <span class="hidden sm:inline !text-[1rem]">Github</span>
         </a>
       </li>
     </ul>

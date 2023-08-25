@@ -1,12 +1,12 @@
 <div class="flex flex-row">
   <!-- main content -->
-  <div class="flex-1 max-w-[calc(100%-26rem)] pl-4 py-4">
-    <div class="card px-24 py-32 mb-4">
-      <h1 class="font-bold">Navigation Drawer</h1>
-      <h4>Used to access different pages that slides from the side</h4>
+  <div class="flex-1 max-w-full lg:max-w-[calc(100%-26rem)] px-4 lg:pr-0 py-4">
+    <div class="card p-10 xl:px-24 md:py-32 mb-4">
+      <span class="font-bold text-[2.25rem] sm:text-[3rem] md:text-[4.5rem] lg:text-[6rem]">Navigation Drawer</span>
+      <p class="text-[1rem] md:text-[1.25rem] lg:text-[1.5rem]">Used to access different pages that slides from the side</p>
     </div>
     
-    <div class="flex flex-col gap-2">
+    <div class="flex flex-col gap-4 md:gap-2">
       <app-tabs
         [id]="'drawer'"
         [putCard]="'yes'"
@@ -27,7 +27,7 @@
   </div>
 
   <!-- side content -->
-  <ul class="basis-[26rem] h-[calc(100vh-4.25rem)] sticky top-[calc(4.25rem)] menu overflow-y-auto">
+  <ul class="hidden lg:block h-[calc(100vh-4.25rem)] sticky top-[calc(4.25rem)] menu overflow-y-auto">
     <li (click)="stService.scroll('drawer')"><a class="normal-case"># Drawer</a></li>
     <li (click)="stService.scroll('openedDrawer')"><a class="normal-case"># Opened Drawer</a></li>
   </ul>
@@ -59,11 +59,13 @@
 
 
 <ng-template #drawerOpen>
-  <div class="w-[23rem] h-[20rem] bg-tertiary-90">
-    <ul class="menu">
-      <li><a>Item 1</a></li>
-      <li><a>Item 2</a></li>
-      <li><a>Item 3</a></li>
-    </ul>
+  <div class="overflow-x-auto">
+    <div class="w-[23rem] h-[20rem] bg-tertiary-90">
+      <ul class="menu">
+        <li><a>Item 1</a></li>
+        <li><a>Item 2</a></li>
+        <li><a>Item 3</a></li>
+      </ul>
+    </div>
   </div>
 </ng-template>

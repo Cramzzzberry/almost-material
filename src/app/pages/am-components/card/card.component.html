@@ -1,12 +1,12 @@
 <div class="flex flex-row">
   <!-- main content -->
-  <div class="flex-1 max-w-[calc(100%-26rem)] pl-4 py-4">
-    <div class="card px-24 py-32 mb-4">
-      <h1 class="font-bold">Card</h1>
-      <h4>Used to contain a group of elements</h4>
+  <div class="flex-1 max-w-full lg:max-w-[calc(100%-26rem)] px-4 lg:pr-0 py-4">
+    <div class="card p-10 md:px-24 md:py-32 mb-4">
+      <span class="font-bold text-[3rem] md:text-[4.5rem] lg:text-[6rem]">Card</span>
+      <p class="text-[1rem] md:text-[1.25rem] lg:text-[1.5rem]">Used to contain a group of elements</p>
     </div>
     
-    <div class="flex flex-col gap-2 min-w-full">
+    <div class="flex flex-col gap-4 md:gap-2 min-w-full">
       <app-tabs
         [id]="'typicalCard'"
         [putCard]="'no'"
@@ -51,7 +51,7 @@
   </div>
 
   <!-- side content -->
-  <ul class="basis-[26rem] h-[calc(100vh-4.25rem)] sticky top-[calc(4.25rem)] menu overflow-y-auto">
+  <ul class="hidden lg:block basis-[26rem] h-[calc(100vh-4.25rem)] sticky top-[calc(4.25rem)] menu overflow-y-auto">
     <li (click)="stService.scroll('typicalCard')"><a class="normal-case"># Typical Card</a></li>
     <li (click)="stService.scroll('typicalHorizontalCard')"><a class="normal-case"># Typical horizontal Card</a></li>
     <li (click)="stService.scroll('outlinedCard')"><a class="normal-case"># Outlined Card</a></li>
@@ -81,8 +81,8 @@
 </ng-template>
 
 <ng-template #typicalHorizontalCard>
-  <div class="flex justify-center">
-    <div class="card card-horizontal w-[38rem] h-[16rem]">
+  <div class="flex md:justify-center overflow-x-auto">
+    <div class="card card-horizontal w-[38rem] h-[16rem] shrink-0">
       <!-- card image -->
       <div class="image image-card" style="--image-url: url('https://img.freepik.com/free-photo/top-view-beautiful-music-concept_23-2148605827.jpg?w=826&t=st=1691481090~exp=1691481690~hmac=24227de354ba4da1cb13fce1e1981530adf63decc40bcd8fa94a9b0a5bc23186')"></div>
 
